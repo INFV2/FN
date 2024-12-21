@@ -1,0 +1,3834 @@
+heres all endpoints i know still do the winterfest stuff with correct url also give full new code modern ui purple scheme export default Object.freeze({
+  // AUTH
+  LOGIN_REPUTATION: 'https://www.epicgames.com/id/api/reputation',
+  LOGIN_CSRF: 'https://www.epicgames.com/id/api/csrf',
+  LOGIN: 'https://www.epicgames.com/id/api/login',
+  LOGIN_EXCHANGE: 'https://www.epicgames.com/id/api/exchange',
+  OAUTH_TOKEN_CREATE: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
+  OAUTH_TOKEN_VERIFY: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/verify',
+  OAUTH_TOKEN_KILL: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill',
+  OAUTH_TOKEN_KILL_MULTIPLE: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill',
+  OAUTH_EXCHANGE: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/exchange',
+  OAUTH_DEVICE_AUTH: 'https://account-public-service-prod.ol.epicgames.com/account/api/public/account',
+  OAUTH_DEVICE_CODE: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/deviceAuthorization',
+
+
+  // INITIAL SETUP
+  INIT_EULA: 'https://eulatracking-public-service-prod-m.ol.epicgames.com/eulatracking/api/public/agreements/fn',
+  INIT_GRANTACCESS: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/game/v2/grant_access',
+
+
+  // XMPP
+  XMPP_SERVER: 'xmpp-service-prod.ol.epicgames.com',
+  EPIC_PROD_ENV: 'prod.ol.epicgames.com',
+
+
+  // EOS
+  EOS_STOMP: 'connect.epicgames.dev',
+  EOS_TOKEN: 'https://api.epicgames.dev/epic/oauth/v2/token',
+  EOS_TOKEN_INFO: 'https://api.epicgames.dev/epic/oauth/v2/tokenInfo',
+  EOS_TOKEN_REVOKE: 'https://api.epicgames.dev/epic/oauth/v2/revoke',
+  EOS_CHAT: 'https://api.epicgames.dev/epic/chat',
+
+
+  // BATTLE ROYALE
+  BR_STATS_V2: 'https://statsproxy-public-service-live.ol.epicgames.com/statsproxy/api/statsv2',
+  BR_SERVER_STATUS: 'https://lightswitch-public-service-prod06.ol.epicgames.com/lightswitch/api/service/bulk/status?serviceId=Fortnite',
+  BR_STORE: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/storefront/v2/catalog',
+  BR_STORE_KEYCHAIN: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/storefront/v2/keychain?numKeysDownloaded=0',
+  BR_NEWS: 'https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game',
+  BR_NEWS_MOTD: 'https://prm-dialogue-public-api-prod.edea.live.use1a.on.epicgames.com/api/v1/fortnite-br/surfaces/motd/target',
+  BR_EVENT_FLAGS: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/calendar/v1/timeline',
+  BR_SAC_SEARCH: 'https://payment-website-pci.ol.epicgames.com/affiliate/search-by-slug',
+  BR_SAC: 'https://affiliate-public-service-prod.ol.epicgames.com/affiliate/api/public/affiliates/slug',
+  BR_PARTY: 'https://party-service-prod.ol.epicgames.com/party/api/v1/Fortnite',
+  BR_TOURNAMENTS: 'https://events-public-service-live.ol.epicgames.com/api/v1/events/Fortnite/data',
+  BR_TOURNAMENTS_DOWNLOAD: 'https://events-public-service-live.ol.epicgames.com/api/v1/events/Fortnite/download',
+  BR_TOURNAMENT_WINDOW: 'https://events-public-service-live.ol.epicgames.com/api/v1/leaderboards/Fortnite',
+  BR_TOURNAMENT_TOKENS: 'https://events-public-service-live.ol.epicgames.com/api/v1/players/Fortnite/tokens',
+  BR_STREAM: 'https://fortnite-vod.akamaized.net',
+  BR_REPLAY: 'https://datastorage-public-service-live.ol.epicgames.com/api/v1/access/fnreplays/public',
+  BR_REPLAY_METADATA: 'https://datastorage-public-service-live.ol.epicgames.com/api/v1/access/fnreplaysmetadata/public',
+  BR_GIFT_ELIGIBILITY: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/storefront/v2/gift/check_eligibility',
+
+
+  // CREATIVE
+  CREATIVE_ISLAND_LOOKUP: 'https://links-public-service-live.ol.epicgames.com/links/api/fn/mnemonic',
+  CREATIVE_DISCOVERY: 'https://fn-service-discovery-live-public.ogs.live.on.epicgames.com/api/v1/discovery/surface',
+
+
+  // SAVE THE WORLD
+  STW_WORLD_INFO: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/game/v2/world/info',
+
+
+  // ACCOUNT
+  ACCOUNT_MULTIPLE: 'https://account-public-service-prod.ol.epicgames.com/account/api/public/account',
+  ACCOUNT_DISPLAYNAME: 'https://account-public-service-prod.ol.epicgames.com/account/api/public/account/displayName',
+  ACCOUNT_ID: 'https://account-public-service-prod.ol.epicgames.com/account/api/public/account',
+  ACCOUNT_EMAIL: 'https://account-public-service-prod.ol.epicgames.com/account/api/public/account/email',
+  ACCOUNT_SEARCH: 'https://user-search-service-prod.ol.epicgames.com/api/v1/search',
+  ACCOUNT_AVATAR: 'https://avatar-service-prod.identity.live.on.epicgames.com/v1/avatar',
+  ACCOUNT_GLOBAL_PROFILE: 'https://global-profile-service.game-social.epicgames.com/profiles',
+  MCP: 'https://fngw-mcp-gc-livefn.ol.epicgames.com/fortnite/api/game/v2/profile',
+
+
+  // FRIENDS
+  FRIENDS: 'https://friends-public-service-prod.ol.epicgames.com/friends/api/v1',
+  FRIEND_ADD: 'https://friends-public-service-prod.ol.epicgames.com/friends/api/public/friends',
+  FRIEND_DELETE: 'https://friends-public-service-prod.ol.epicgames.com/friends/api/v1',
+  FRIEND_BLOCK: 'https://friends-public-service-prod.ol.epicgames.com/friends/api/public/blocklist',
+
+
+  // SERVER STATUS
+  SERVER_STATUS_SUMMARY: 'https://ft308v428dv3.statuspage.io/api/v2/summary.json',
+
+
+  // GRAPH QL
+  GRAPHQL: 'https://graphql.epicgames.com/graphql',
+}); export enum AuthSessionType {
+  Fortnite = 'fortnite',
+  FortniteClientCredentials = 'fortniteClientCredentials',
+  EOS = 'eos',
+  Launcher = 'launcher',
+}
+
+
+export enum AuthSessionStoreKey {
+  Fortnite = 'fortnite',
+  FortniteClientCredentials = 'fortniteClientCredentials',
+  FortniteEOS = 'fortniteEOS',
+  Launcher = 'launcher',
+} import type { FullPlatform, Region, STWSchematicAlterationRarity } from './structs';
+
+
+export interface EpicgamesAPIErrorData {
+  errorCode: string;
+  errorMessage: string;
+  messageVars: string[];
+  numericErrorCode: number;
+  originatingService: string;
+  intent: string;
+  error_description: string;
+  error: string;
+  errorStatus?: number;
+}
+
+
+export interface EpicgamesOAuthData {
+  access_token: string;
+  expires_in: number;
+  expires_at: string;
+  token_type: string;
+  refresh_token: string;
+  refresh_expires: number;
+  refresh_expires_at: string;
+  account_id: string;
+  client_id: string;
+  internal_client: boolean;
+  client_service: string;
+  displayName: string;
+  app: string;
+  in_app_id: string;
+  device_id: string;
+}
+
+
+export type PlatformMappings = {
+  // eslint-disable-next-line no-unused-vars
+  [key in FullPlatform]?: string;
+};
+
+
+export type RegionMappings = {
+  // eslint-disable-next-line no-unused-vars
+  [key in Region]?: string;
+};
+
+
+export interface TournamentMetadata {
+  minimumAccountLevel: number;
+  pool: string;
+  AccountLockType: string;
+  TeamLockType: string;
+  DisqualifyType: string;
+  RegionLockType: string;
+}
+
+
+export interface TournamentWindowBlackoutPeriod {
+  beginTime: string;
+  endTime: string;
+  recurrence: string;
+}
+
+
+export interface TournamentWindowScoreLocation {
+  scoreMode: string;
+  scoreId: string;
+  leaderboardId: string;
+  useIndividualScores?: boolean;
+}
+
+
+export interface TournamentWindowMetadata {
+  RoundType: string;
+  ThresholdToAdvanceDivision: number;
+  divisionRank: number;
+  ServerReplays?: boolean;
+  ScheduledMatchmakingInitialDelaySeconds?: number;
+  SubgroupId: string;
+  ScheduledMatchmakingMatchDelaySeconds?: number;
+  liveSpectateAccessToken: string;
+}
+
+
+export interface TournamentWindowData {
+  eventWindowId: string;
+  eventTemplateId: string;
+  countdownBeginTime: string;
+  beginTime: string;
+  endTime: string;
+  blackoutPeriods: TournamentWindowBlackoutPeriod[];
+  round: number;
+  payoutDelay: number;
+  isTBD: boolean;
+  canLiveSpectate: boolean;
+  scoreLocations: TournamentWindowScoreLocation[];
+  visibility: string;
+  requireAllTokens: string[];
+  requireAnyTokens: string[];
+  requireNoneTokensCaller: string[];
+  requireAllTokensCaller: any[];
+  requireAnyTokensCaller: any[];
+  additionalRequirements: string[];
+  teammateEligibility: string;
+  metadata: TournamentWindowMetadata;
+}
+
+
+export interface TournamentData {
+  gameId: string;
+  eventId: string;
+  regions: Region[];
+  regionMappings: RegionMappings;
+  platforms: FullPlatform[];
+  platformMappings: PlatformMappings;
+  displayDataId: string;
+  eventGroup: string;
+  announcementTime: string;
+  appId?: any;
+  environment?: any;
+  metadata: TournamentMetadata;
+  eventWindows: TournamentWindowData[];
+  beginTime: string;
+  endTime: string;
+}
+
+
+export interface TournamentDisplayData {
+  title_color: string;
+  loading_screen_image: string;
+  background_text_color: string;
+  background_right_color: string;
+  poster_back_image: string;
+  _type: string;
+  pin_earned_text: string;
+  tournament_display_id: string;
+  schedule_info: string;
+  primary_color: string;
+  flavor_description: string;
+  poster_front_image: string;
+  short_format_title: string;
+  title_line_2: string;
+  title_line_1: string;
+  shadow_color: string;
+  details_description: string;
+  background_left_color: string;
+  long_format_title: string;
+  poster_fade_color: string;
+  secondary_color: string;
+  playlist_tile_image: string;
+  base_color: string;
+  highlight_color: string;
+  background_title: string;
+  pin_score_requirement?: number;
+}
+
+
+export interface TournamentWindowTemplatePayoutTable {
+  scoreId: string;
+  scoringType: string;
+  ranks: {
+    threshold: number;
+    payouts: {
+      rewardType: string;
+      rewardMode: string;
+      value: string;
+      quantity: number;
+    }[];
+  }[];
+}
+
+
+export interface TournamentWindowTemplateTiebreakFormula {
+  basePointsBits: number;
+  components: {
+    trackedStat: string;
+    bits: number;
+    multiplier?: number;
+    aggregation: string;
+  }[];
+}
+
+
+export interface TournamentWindowTemplateScoringRule {
+  trackedStat: string;
+  matchRule: string;
+  rewardTiers: {
+    keyValue: number;
+    pointsEarned: number;
+    multiplicative: boolean;
+  }[];
+}
+
+
+export interface TournamentWindowTemplateData {
+  gameId: string;
+  eventTemplateId: string;
+  playlistId: string;
+  matchCap: number;
+  liveSessionAttributes: string[];
+  scoringRules: TournamentWindowTemplateScoringRule[];
+  tiebreakerFormula: TournamentWindowTemplateTiebreakFormula;
+  payoutTable: TournamentWindowTemplatePayoutTable[];
+}
+
+
+export interface TournamentWindowResults {
+  gameId: string;
+  eventId: string;
+  eventWindowId: string;
+  page: number;
+  totalPages: number;
+  updatedTime: string;
+  entries: {
+    gameId: string;
+    eventId: string;
+    eventWindowId: string;
+    teamAccountIds: string[];
+    liveSessionId?: string;
+    pointsEarned: number;
+    score: number;
+    rank: number;
+    percentile: number;
+    pointBreakdown: {
+      [statIndex: string]: {
+        timesAchieved: number;
+        pointsEarned: number;
+      };
+    };
+    sessionHistory: {
+      sessionId: string;
+      endTime: string;
+      trackedStats: {
+        PLACEMENT_STAT_INDEX: number;
+        TIME_ALIVE_STAT: number;
+        TEAM_ELIMS_STAT_INDEX: number;
+        MATCH_PLAYED_STAT: number;
+        PLACEMENT_TIEBREAKER_STAT: number;
+        VICTORY_ROYALE_STAT: number;
+      };
+    }[];
+    tokens: string[];
+    teamId: string;
+  }[];
+  liveSessions: any;
+}
+
+
+export interface BlurlStreamMasterPlaylistData {
+  type: 'master';
+  language: string;
+  url: string;
+  data: string;
+  duration?: number;
+}
+
+
+export interface BlurlStreamVariantPlaylistData {
+  type: 'variant';
+  rel_url: string;
+  data: string;
+}
+
+
+export interface BlurlStreamData {
+  playlists: (BlurlStreamMasterPlaylistData | BlurlStreamVariantPlaylistData)[];
+  subtitles: string;
+  ucp?: string;
+  audioonly?: boolean;
+  aspectratio?: string;
+  partysync?: boolean;
+  lrcs: string;
+  duration?: number;
+}
+
+
+export interface CreativeIslandData {
+  namespace: string;
+  accountId: string;
+  creatorName: string;
+  mnemonic: string;
+  linkType: string;
+  metadata: {
+    mode: string;
+    quicksilver_id: string;
+    image_url: string;
+    tagline: string;
+    islandType: string;
+    title: string;
+    locale: string;
+    matchmaking: {
+      selectedJoinInProgressType: number;
+      playersPerTeam: number;
+      maximumNumberOfPlayers: number;
+      override_Playlist: string;
+      playerCount: number;
+      mmsType: string;
+      mmsPrivacy: string;
+      numberOfTeams: number;
+      bAllowJoinInProgress: boolean;
+      minimumNumberOfPlayers: number;
+      joinInProgressTeam: number;
+    };
+    supportCode: string;
+    introduction: string;
+    generated_image_urls: {
+      url_s: string;
+      url_m: string;
+      compressed: {
+        url_s: string;
+        url_m: string;
+        url: string;
+      };
+      url: string;
+    };
+  };
+  version: number;
+  active: boolean;
+  disabled: boolean;
+  created: string;
+  published: string;
+  descriptionTags: string[];
+  moderationStatus: string;
+}
+
+
+export interface CreativeDiscoveryPanel {
+  PanelName: string;
+  Pages: {
+    results: {
+      linkData: CreativeIslandData;
+      isFavorite: boolean;
+    }[];
+    hasMore: boolean;
+  }[];
+}
+
+
+export interface STWProfileItemData {
+  templateId: string;
+  attributes: {
+    [key: string]: any;
+  };
+  quantity: number;
+}
+
+
+export interface STWProfileSurvivorData extends STWProfileItemData {
+  attributes: {
+    gender: '1' | '2';
+    level: number;
+    squad_slot_idx: number;
+    item_seen: boolean;
+    managerSynergy?: string;
+    portrait?: string;
+    max_level_bonus: number;
+    personality: string;
+    squad_id: string;
+    xp: number;
+    slotted_building_id: string;
+    building_slot_used: number;
+    favorite: boolean;
+    set_bonus: string;
+  };
+}
+
+
+export interface STWProfileLockerSlotData {
+  items: string[];
+  activeVariants: string[];
+}
+
+
+export interface STWProfileLockerData extends STWProfileItemData {
+  attributes: {
+    locker_slots_data: {
+      slots: {
+        Pickaxe: STWProfileLockerSlotData;
+        MusicPack?: STWProfileLockerSlotData;
+        Character?: STWProfileLockerSlotData;
+        ItemWrap: STWProfileLockerSlotData;
+        Backpack: STWProfileLockerSlotData;
+        Dance: STWProfileLockerSlotData;
+        LoadingScreen: STWProfileLockerSlotData;
+      };
+    };
+    use_count: number;
+    banner_icon_template: string;
+    banner_color_template: string;
+    locker_name: string;
+    item_seen: boolean;
+    favorite: boolean;
+  };
+}
+
+
+export interface STWProfileResourceData extends STWProfileItemData {
+  attributes: {
+    max_level_bonus: number;
+    level: number;
+    item_seen: boolean;
+    xp: number;
+    favorite: boolean;
+  };
+}
+
+
+export interface STWProfileHeroVariantData {
+  channel: string;
+  active: string;
+}
+
+
+export interface STWProfileHeroData extends STWProfileItemData {
+  attributes: {
+    outfitvariants: STWProfileHeroVariantData[];
+    backblingvariants: STWProfileHeroVariantData[];
+    gender: 0;
+    level: number;
+    item_seen: boolean;
+    squad_slot_idx: number;
+    portrait: string;
+    hero_name: string;
+    max_level_bonus: number;
+    squad_id: string;
+    mode_loadouts: [];
+    xp: number;
+    slotted_building_id: string;
+    refundable: boolean;
+    favorite: boolean;
+    building_slot_used: number;
+  }
+}
+
+
+export interface STWProfileHeroLoadoutData extends STWProfileItemData {
+  attributes: {
+    team_perk?: string;
+    loadout_name: string;
+    crew_members: {
+      commanderslot: string;
+      followerslot1?: string;
+      followerslot2?: string;
+      followerslot3?: string;
+      followerslot4?: string;
+      followerslot5?: string;
+      leaderslot?: string;
+    };
+    loadout_index: number;
+    gadgets: {
+      gadget: string;
+      slot_index: number;
+    }[];
+  }
+}
+
+
+export interface STWProfileSchematicData extends STWProfileItemData {
+  attributes: {
+    legacy_alterations: unknown[];
+    max_level_bonus: number;
+    refund_legacy_item: boolean;
+    level: number;
+    item_seen: boolean;
+    alterations: string[];
+    xp: number;
+    refundable: boolean;
+    alteration_base_rarities: STWSchematicAlterationRarity[];
+    favorite: boolean;
+  }
+}
+
+
+export interface STWProfileStatsData {
+  node_costs: Partial<{
+    homebase_node_default_page: {
+      'Token:homebasepoints': number;
+    };
+    research_node_default_page: {
+      'Token:homebasepoints': number;
+    };
+  }>;
+  use_random_loadout: boolean;
+  mission_alert_redemption_record: Partial<{
+    claimData: {
+      missionAlertId: string;
+      redemptionDateUtc: string;
+      evictClaimDataAfterUtc: string;
+    }[];
+  }>;
+  rewards_claimed_post_max_level: number;
+  selected_hero_loadout: string;
+  loadouts: string[];
+  collection_book: Partial<{
+    maxBookXpLevelAchieved: number;
+  }>;
+  mfa_reward_claimed: boolean;
+  quest_manager: Partial<{
+    dailyLoginInterval: string;
+    dailyQuestRerolls: number;
+    questPoolStats: {
+      poolStats: {
+        poolName: string;
+        nextRefresh: string;
+        rerollsRemaining: number;
+        questHistory: string[];
+      }[];
+      dailyLoginInterval: string;
+      poolLockouts: {
+        poolLockouts: {
+          lockoutName: string;
+        }[];
+      };
+    };
+  }>;
+  legacy_research_points_spent: number;
+  gameplay_stats: {
+    statName: string;
+    statValue: number;
+  }[];
+  permissions: any[];
+  unslot_mtx_spend: number;
+  twitch: any;
+  client_settings: Partial<{
+    pinnedQuestInstances: any[];
+  }>;
+  research_levels: Partial<{
+    technology: number;
+    offense: number;
+    fortitude: number;
+    resistance: number;
+  }>;
+  level: number;
+  xp_overflow: number;
+  latent_xp_marker: string;
+  event_currency?: {
+    templateId: string;
+    cf: number;
+  };
+  inventory_limit_bonus: number;
+  matches_played: number;
+  xp_lost: number;
+  mode_loadouts: any[];
+  last_applied_loadout: string;
+  daily_rewards: Partial<{
+    nextDefaultReward: number;
+    totalDaysLoggedIn: number;
+    lastClaimDate: string;
+    additionalSchedules: {
+      [key: string]: {
+        rewardsClaimed: number;
+        claimedToday: boolean;
+      };
+    };
+  }>;
+  xp: number;
+  packs_granted: number;
+  active_loadout_index: number;
+}
+
+
+export interface STWProfileData {
+  _id: string;
+  created: string;
+  updated: string;
+  rvn: number;
+  wipeNumber: number;
+  accountId: string;
+  profileId: string;
+  version: string;
+  items: {
+    [key: string]: STWProfileItemData;
+  };
+  stats: {
+    attributes: STWProfileStatsData;
+  };
+  commandRevision: number;
+}
+
+
+export interface RawStatsData {
+  accountId: string;
+  startTime: number;
+  endTime: number;
+  stats: {
+    [key: string]: number;
+  };
+}
+
+
+export type STWTheaterLocaleData = string;
+
+
+export interface STWTheaterDataRequirements {
+  commanderLevel: number;
+  personalPowerRating: number;
+  maxPersonalPowerRating: number;
+  partyPowerRating: number;
+  maxPartyPowerRating: number;
+  activeQuestDefinitions: string[];
+  questDefinition: string;
+  objectiveStatHandle: {
+    dataTable: string;
+    rowName: string;
+  };
+  uncompletedQuestDefinition: string;
+  itemDefinition: string;
+  eventFlag: string;
+}
+
+
+export interface STWTheaterColorData {
+  specifiedColor: {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+  };
+  colorUseRule: string;
+}
+
+
+export interface STWTheaterBrushData {
+  imageSize: {
+    x: number;
+    y: number;
+  };
+  margin: {
+    left: number;
+    top: number;
+    right: number;
+    bottom: number;
+  };
+  tintColor: STWTheaterColorData;
+  outlineSettings: {
+    cornerRadii: {
+      x: number;
+      y: number;
+      z: number;
+      w: number;
+    };
+    color: STWTheaterColorData;
+    width: number;
+    roundingType: string;
+  };
+  resourceObject: string;
+  resourceName: string;
+  uVRegion: {
+    min: {
+      x: number;
+      y: number;
+    };
+    max: {
+      x: number;
+      y: number;
+    };
+    bIsValid: number;
+  };
+  drawAs: string;
+  tiling: string;
+  mirroring: string;
+  imageType: string;
+  bIsDynamicallyLoaded: boolean;
+}
+
+
+export interface STWTheaterData {
+  displayName: STWTheaterLocaleData;
+  uniqueId: string;
+  theaterSlot: number;
+  bIsTestTheater: boolean;
+  bHideLikeTestTheater: boolean;
+  requiredEventFlag: string;
+  missionRewardNamedWeightsRowName: string;
+  description: STWTheaterLocaleData;
+  runtimeInfo: {
+    theaterType: string;
+    theaterTags: {
+      gameplayTags: {
+        tagName: string;
+      }[];
+    };
+    eventDependentTheaterTags: {
+      requiredEventFlag: string;
+      relatedTag: {
+        tagName: string;
+      };
+    }[];
+    theaterVisibilityRequirements: STWTheaterDataRequirements;
+    requirements: STWTheaterDataRequirements;
+    requiredSubGameForVisibility: string;
+    bOnlyMatchLinkedQuestsToTiles: boolean;
+    worldMapPinClass: string;
+    theaterImage: string;
+    theaterImages: {
+      brush_XXS: STWTheaterBrushData;
+      brush_XS: STWTheaterBrushData;
+      brush_S: STWTheaterBrushData;
+      brush_M: STWTheaterBrushData;
+      brush_L: STWTheaterBrushData;
+      brush_XL: STWTheaterBrushData;
+    };
+    theaterColorInfo: {
+      bUseDifficultyToDetermineColor: boolean;
+      color: STWTheaterColorData;
+    };
+    socket: string;
+    missionAlertRequirements: STWTheaterDataRequirements;
+    missionAlertCategoryRequirements: {
+      missionAlertCategoryName: string;
+      bRespectTileRequirements: boolean;
+      bAllowQuickplay: boolean;
+    }[];
+    gameplayModifierList: any[];
+  };
+  tiles: {
+    tileType: string;
+    zoneTheme: string;
+    requirements: STWTheaterDataRequirements;
+    linkedQuests: {
+      questDefinition: string;
+      objectiveStatHandle: {
+        dataTable: string;
+        rowName: string;
+      };
+    }[];
+    xCoordinate: number;
+    yCoordinate: number;
+    missionWeightOverrides: {
+      weight: number;
+      missionGenerator: string;
+    }[];
+    difficultyWeightOverrides: {
+      weight: number;
+      difficultyInfo: {
+        dataTable: string;
+        rowName: string;
+      };
+    }[];
+    canBeMissionAlert: boolean;
+    tileTags: {
+      gameplayTags: {
+        tagName: string;
+      }[];
+    };
+    bDisallowQuickplay: boolean;
+  }[];
+  regions: {
+    displayName: STWTheaterLocaleData;
+    uniqueId: string;
+    regionTags: {
+      gameplayTags: {
+        tagName: string;
+      }[];
+    };
+    tileIndices: number[];
+    regionThemeIcon: string;
+    missionData: {
+      missionWeights: {
+        weight: number;
+        missionGenerator: string;
+      }[];
+      difficultyWeights: {
+        weight: number;
+        difficultyInfo: {
+          dataTable: string;
+          rowName: string;
+        };
+      }[];
+      numMissionsAvailable: number;
+      numMissionsToChange: number;
+      missionChangeFrequency: number;
+    };
+    requirements: STWTheaterDataRequirements;
+    missionAlertRequirements: {
+      categoryName: string;
+      requirements: STWTheaterDataRequirements;
+    }[];
+  }[];
+}
+
+
+export interface STWMissionItem {
+  itemType: string;
+  quantity: number;
+}
+
+
+export interface STWMissionTierGroup {
+  tierGroupName: string;
+  items: STWMissionItem[];
+}
+
+
+export interface STWMissionOverrideMissionRewards {
+  Endurance: STWMissionTierGroup;
+  Wargames: STWMissionTierGroup;
+}
+
+
+export interface STWMissionMissionDifficultyInfo {
+  dataTable: string;
+  rowName: string;
+}
+
+
+export interface STWMissionAvailableMission {
+  missionGuid: string;
+  missionRewards: STWMissionTierGroup;
+  overrideMissionRewards: STWMissionOverrideMissionRewards;
+  missionGenerator: string;
+  missionDifficultyInfo: STWMissionMissionDifficultyInfo;
+  tileIndex: number;
+  availableUntil: Date;
+  bonusMissionRewards: STWMissionTierGroup;
+}
+
+
+export interface STWMissionData {
+  theaterId: string;
+  availableMissions: STWMissionAvailableMission[];
+  nextRefresh: string;
+}
+
+
+export interface STWMissionAlertAlteration {
+  LootTierGroup: string;
+  Tier: number;
+}
+
+
+export interface STWMissionAlertAttributes {
+  Alteration: STWMissionAlertAlteration;
+}
+
+
+export interface STWMissionAlertItemWithAttributes {
+  itemType: string;
+  quantity: number;
+  attributes: STWMissionAlertAttributes;
+}
+
+
+export interface STWMissionAlertMissionAlertRewards {
+  tierGroupName: string;
+  items: STWMissionAlertItemWithAttributes[];
+}
+
+
+export interface STWMissionAlertItem {
+  itemType: string;
+  quantity: number;
+}
+
+
+export interface STWMissionAlertMissionAlertModifiers {
+  tierGroupName: string;
+  items: STWMissionAlertItem[];
+}
+
+
+export interface STWMissionAlertAvailableMissionAlert {
+  name: string;
+  categoryName: string;
+  spreadDataName: string;
+  missionAlertGuid: string;
+  tileIndex: number;
+  availableUntil: Date;
+  totalSpreadRefreshes: number;
+  missionAlertRewards: STWMissionAlertMissionAlertRewards;
+  missionAlertModifiers: STWMissionAlertMissionAlertModifiers;
+}
+
+
+export interface STWMissionAlertData {
+  theaterId: string;
+  availableMissionAlerts: STWMissionAlertAvailableMissionAlert[];
+  nextRefresh: Date;
+} import HomebaseRatingMapping from './HomebaseRatingMapping.json';
+import BaseItemRating from './BaseItemRating.json';
+import SurvivorItemRating from './SurvivorItemRating.json';
+import CurveTable from '../src/util/CurveTable';
+import type { CurveKey } from '../src/util/CurveTable';
+
+
+function mapCurveTables<T extends { [k: keyof any]: { Keys: CurveKey[] } }>(struc: T) {
+  const entries1 = Object.entries(struc);
+  const entries2 = entries1.map(([k, v]) => [k.toLowerCase(), Object.freeze(new CurveTable(v.Keys))]);
+  // False alarm: eslint claims K is used before it's defined, which it obviously isn't.
+  // eslint-disable-next-line no-use-before-define
+  const obj = Object.fromEntries(entries2) as { [K in keyof T as Lowercase<string & K>]: Readonly<CurveTable> };
+  return Object.freeze(obj);
+}
+
+
+export default Object.freeze({
+  homebaseRating: Object.freeze(new CurveTable(HomebaseRatingMapping[0].ExportValue.UIMonsterRating.Keys)),
+  baseItemRating: mapCurveTables(BaseItemRating[0].ExportValue),
+  survivorItemRating: mapCurveTables(SurvivorItemRating[0].ExportValue),
+}); /* eslint-disable camelcase */
+import type { Collection } from '@discordjs/collection';
+import type { RawAxiosRequestConfig } from 'axios';
+import type { PathLike } from 'fs';
+import type defaultPartyMeta from './defaultPartyMeta.json';
+import type defaultPartyMemberMeta from './defaultPartyMemberMeta.json';
+import type EpicgamesAPIError from '../src/exceptions/EpicgamesAPIError';
+import type BlockedUser from '../src/structures/user/BlockedUser';
+import type ClientParty from '../src/structures/party/ClientParty';
+import type ClientPartyMember from '../src/structures/party/ClientPartyMember';
+import type ClientUser from '../src/structures/user/ClientUser';
+import type Friend from '../src/structures/friend/Friend';
+import type FriendPresence from '../src/structures/friend/FriendPresence';
+import type IncomingPendingFriend from '../src/structures/friend/IncomingPendingFriend';
+import type OutgoingPendingFriend from '../src/structures/friend/OutgoingPendingFriend';
+import type ReceivedPartyJoinRequest from '../src/structures/party/ReceivedPartyJoinRequest';
+import type PartyMember from '../src/structures/party/PartyMember';
+import type PartyMemberConfirmation from '../src/structures/party/PartyMemberConfirmation';
+import type PartyMessage from '../src/structures/party/PartyMessage';
+import type ReceivedPartyInvitation from '../src/structures/party/ReceivedPartyInvitation';
+import type User from '../src/structures/user/User';
+import type {
+  EpicgamesOAuthData, STWMissionAlertData, STWMissionData, STWProfileLockerSlotData,
+  STWTheaterData, TournamentWindowTemplateData,
+} from './httpResponses';
+import type ReceivedFriendMessage from '../src/structures/friend/ReceivedFriendMessage';
+import type STWSurvivor from '../src/structures/stw/STWSurvivor';
+import type { AuthSessionStoreKey } from './enums';
+import type FortniteAuthSession from '../src/auth/FortniteAuthSession';
+import type LauncherAuthSession from '../src/auth/LauncherAuthSession';
+import type FortniteClientCredentialsAuthSession from '../src/auth/FortniteClientCredentialsAuthSession';
+import type EOSAuthSession from '../src/auth/EOSAuthSession';
+
+
+export type PartyMemberSchema = Partial<typeof defaultPartyMemberMeta>;
+export type PartySchema = Partial<typeof defaultPartyMeta> & {
+  'urn:epic:cfg:presence-perm_s'?: string;
+  'urn:epic:cfg:accepting-members_b'?: string;
+  'urn:epic:cfg:invite-perm_s'?: string;
+  'urn:epic:cfg:not-accepting-members'?: string;
+  'urn:epic:cfg:not-accepting-members-reason_i'?: string;
+};
+
+
+export type Schema = Record<string, string | undefined>;
+
+
+export type Language = 'de' | 'ru' | 'ko' | 'zh-hant' | 'pt-br' | 'en'
+  | 'it' | 'fr' | 'zh-cn' | 'es' | 'ar' | 'ja' | 'pl' | 'es-419' | 'tr';
+
+
+export type StringFunction = () => string;
+
+
+export type StringFunctionAsync = () => Promise<string>;
+
+
+export interface DeviceAuth {
+  /**
+   * The device auth's account ID
+   */
+  accountId: string;
+
+
+  /**
+   * The device auth's device ID (that does not mean it can only be used on a single device)
+   */
+  deviceId: string;
+
+
+  /**
+   * The device auth's secret
+   */
+  secret: string;
+}
+
+
+export interface DeviceAuthWithSnakeCaseSupport extends DeviceAuth {
+  /**
+   * The device auth's account ID
+   */
+  account_id?: string;
+
+
+  /**
+   * The device auth's device ID (that does not mean it can only be used on a single device)
+   */
+  device_id?: string;
+}
+
+
+export type DeviceAuthFunction = () => DeviceAuth;
+
+
+export type DeviceAuthFunctionAsync = () => Promise<DeviceAuth>;
+
+
+export type DeviceAuthResolveable = DeviceAuth | PathLike | DeviceAuthFunction | DeviceAuthFunctionAsync;
+
+
+export type AuthStringResolveable = string | PathLike | StringFunction | StringFunctionAsync;
+
+
+export type Platform = 'WIN' | 'MAC' | 'PSN' | 'XBL' | 'SWT' | 'IOS' | 'AND' | 'PS5' | 'XSX';
+
+
+export type AuthClient = 'fortnitePCGameClient' | 'fortniteIOSGameClient' | 'fortniteAndroidGameClient'
+  | 'fortniteSwitchGameClient' | 'fortniteCNGameClient' | 'launcherAppClient2' | 'Diesel - Dauntless';
+
+
+export interface RefreshTokenData {
+  /**
+   * The refresh token
+   */
+  token: string;
+
+
+  /**
+   * The refresh token's expiration time in seconds
+   */
+  expiresIn: number;
+
+
+  /**
+   * The refresh token's expiration date
+   */
+  expiresAt: string;
+
+
+  /**
+   * The ID of the account the refresh token belongs to
+   */
+  accountId: string;
+
+
+  /**
+   * The display name of the account the refresh token belongs to
+   */
+  displayName: string;
+
+
+  /**
+   * The refresh token's client ID (will always be the ID of launcherAppClient2)
+   */
+  clientId: string;
+}
+
+
+export interface CacheSetting {
+  /**
+   * How long the data should stay in the cache until it is considered sweepable (in seconds, 0 for no cache, Infinity for infinite)
+   */
+  maxLifetime: number;
+
+
+  /**
+   * How frequently to remove cached data that is older than the lifetime (in seconds, 0 for never)
+   */
+  sweepInterval: number;
+}
+
+
+export interface CacheSettings {
+  /**
+   * The presence cache settings
+   */
+  presences?: CacheSetting;
+
+
+  /**
+   * The user cache settings
+   */
+  users?: CacheSetting;
+}
+
+
+export interface AuthOptions {
+  /**
+   * A device auth object, a function that returns a device auth object or a path to a file containing a device auth object
+   */
+  deviceAuth?: DeviceAuthResolveable;
+
+
+  /**
+   * An exchange code, a function that returns an exchange code or a path to a file containing an exchange code
+   */
+  exchangeCode?: AuthStringResolveable;
+
+
+  /**
+   * An authorization code, a function that returns an authorization code or a path to a file containing an authorization code
+   */
+  authorizationCode?: AuthStringResolveable;
+
+
+  /**
+   * A refresh token, a function that returns a refresh token or a path to a file containing a refresh token
+   */
+  refreshToken?: AuthStringResolveable;
+
+
+  /**
+   * A launcher refresh token, a function that returns a launcher refresh token or a path to a file containing a launcher refresh token
+   */
+  launcherRefreshToken?: AuthStringResolveable;
+
+
+  /**
+   * Whether the client should check whether the EULA has been accepted.
+   * Do not modify this unless you know what you're doing
+   */
+  checkEULA?: boolean;
+
+
+  /**
+   * Whether the client should kill other active Fortnite auth sessions on startup
+   */
+  killOtherTokens?: boolean;
+
+
+  /**
+   * Whether the client should create a launcher auth session and keep it alive.
+   * The launcher auth session can be accessed via `client.auth.auths.get('launcher')`
+   */
+  createLauncherSession?: boolean;
+
+
+  /**
+   * The Fortnite auth client (eg. 'fortnitePCGameClient' or 'fortniteAndroidGameClient')
+   */
+  authClient?: AuthClient;
+}
+
+
+export interface PartyPrivacy {
+  partyType: 'Public' | 'FriendsOnly' | 'Private';
+  inviteRestriction: 'AnyMember' | 'LeaderOnly';
+  onlyLeaderFriendsCanJoin: boolean;
+  presencePermission: 'Anyone' | 'Leader' | 'Noone';
+  invitePermission: 'Anyone' | 'AnyMember' | 'Leader';
+  acceptingMembers: boolean;
+}
+
+
+export interface PartyOptions {
+  joinConfirmation?: boolean;
+  joinability?: 'OPEN' | 'INVITE_AND_FORMER';
+  discoverability?: 'ALL' | 'INVITED_ONLY';
+  privacy?: PartyPrivacy;
+  maxSize?: number;
+  intentionTtl?: number;
+  inviteTtl?: number;
+  chatEnabled?: boolean;
+}
+
+
+export interface PartyConfig {
+  type: 'DEFAULT';
+  joinability: 'OPEN' | 'INVITE_AND_FORMER';
+  discoverability: 'ALL' | 'INVITED_ONLY';
+  subType: 'default';
+  maxSize: number;
+  inviteTtl: number;
+  intentionTtl: number;
+  joinConfirmation: boolean;
+  privacy: PartyPrivacy;
+}
+
+
+export type PresenceOnlineType = 'online' | 'away' | 'chat' | 'dnd' | 'xa';
+
+
+export type StatsPlaylistType = 'other' | 'solo' | 'duo' | 'squad' | 'ltm';
+
+
+export interface ClientConfig {
+  /**
+   * Whether the party member meta (outfit, emote, etc) should be saved so they are kept when joining a new party
+   */
+  savePartyMemberMeta: boolean;
+
+
+  /**
+   * Additional axios request options
+   */
+  http: RawAxiosRequestConfig;
+
+
+  /**
+   * Debug function used for general debugging purposes
+   */
+  debug?: (message: string) => void;
+
+
+  /**
+   * Debug function used for http requests
+   */
+  httpDebug?: (message: string) => void;
+
+
+  /**
+   * Debug function used for incoming and outgoing xmpp xml payloads
+   */
+  xmppDebug?: (message: string) => void;
+
+
+  /**
+   * Debug function used for incoming and outgoing stomp eos connect messages
+   */
+  stompEosConnectDebug?: (message: string) => void;
+
+
+  /**
+   * Default friend presence of the bot (eg. "Playing Battle Royale")
+   */
+  defaultStatus?: string;
+
+
+  /**
+   * Default online type of the bot (eg "away"). None for online
+   */
+  defaultOnlineType: PresenceOnlineType;
+
+
+  /**
+   * The client's platform (WIN by default)
+   */
+  platform: Platform;
+
+
+  /**
+   * The client's default party member meta (can be used to set a custom default skin, etc)
+   */
+  defaultPartyMemberMeta: Schema;
+
+
+  /**
+   * Custom keep alive interval for the xmpp websocket connection.
+   * You should lower this value if the client randomly reconnects
+   */
+  xmppKeepAliveInterval: number;
+
+
+  /**
+   * The maximum amount of times the client should try to reconnect to XMPP before giving up
+   */
+  xmppMaxConnectionRetries: number;
+
+
+  /**
+   * Settings that affect the way the client caches certain data
+   */
+  cacheSettings: CacheSettings;
+
+
+  /**
+   * Client authentication options. By default the client will ask you for an authorization code
+   */
+  auth: AuthOptions;
+
+
+  /**
+   * Default config used for creating parties
+   */
+  partyConfig: PartyOptions;
+
+
+  /**
+   * Whether the client should create a party on startup
+   */
+  createParty: boolean;
+
+
+  /**
+   * Whether a new party should be force created on start (even if the client is already member of a party)
+   */
+  forceNewParty: boolean;
+
+
+  /**
+   * Whether to completely disable all party related functionality
+   */
+  disablePartyService: boolean;
+
+
+  /**
+   * Whether the client should connect via XMPP.
+   * NOTE: If you disable this, almost all features related to friend caching will no longer work.
+   * Do not disable this unless you know what you're doing
+   */
+  connectToXMPP: boolean;
+
+
+  /**
+   * Whether the client should connect to eos connect stomp
+   * NOTE: If you disable this, receiving party or private messages will no longer work.
+   * Do not disable this unless you know what you're doing
+   */
+  connectToStompEOSConnect: boolean;
+
+
+  /**
+   * Whether the client should fetch all friends on startup.
+   * NOTE: If you disable this, almost all features related to friend caching will no longer work.
+   * Do not disable this unless you know what you're doing
+   */
+  fetchFriends: boolean;
+
+
+  /**
+   * Timeout (in ms) for how long a friend is considered online after the last presence was received.
+   * Note: Usually the client will receive a presence when the friend goes offline, when that does not happen, this timeout will be used
+   */
+  friendOfflineTimeout: number;
+
+
+  /**
+   * How many times to retry on HTTP 5xx errors
+   */
+  restRetryLimit: number;
+
+
+  /**
+   * Whether the client should handle rate limits (429 status code responses)
+   */
+  handleRatelimits: boolean;
+
+
+  /**
+   * The party build id (does not change very often, don't change this unless you know what you're doing)
+   */
+  partyBuildId: string;
+
+
+  /**
+   * Whether the client should restart if a refresh token is invalid.
+   * Refresh tokens can be invalid if you logged in with another client on the same account.
+   * By default, this is set to false because two clients attempting to log into one account could result in an endless loop
+   */
+  restartOnInvalidRefresh: boolean;
+
+
+  /**
+   * The default language for all http requests.
+   * Will be overwritten by a method's language parameter
+   */
+  language: Language;
+
+
+  /**
+   * Amount of time (in ms) to wait after the initial xmpp connection before emitting friend:online events
+   */
+  friendOnlineConnectionTimeout: number;
+
+
+  /**
+   * A custom parser for resolving the stats playlist type (ie. "solo", "duo", "ltm").
+   * Can be useful if you want to use data in the game files to determine the stats playlist type
+   */
+  statsPlaylistTypeParser?: (playlistId: string) => StatsPlaylistType;
+
+
+  /**
+   * fortnite deployment id (eos)
+   */
+  eosDeploymentId: string;
+}
+
+
+export interface MatchMeta {
+  location?: 'PreLobby' | 'InGame' | 'ReturningToFrontEnd';
+  hasPreloadedAthena?: boolean;
+  isSpectatable?: boolean;
+  playerCount?: number;
+  matchStartedAt?: Date;
+}
+
+
+export interface ClientOptions extends Partial<ClientConfig> { }
+
+
+export interface ClientEvents {
+  /**
+   * Emitted when the client is ready
+   */
+  ready: () => void;
+
+
+  /**
+   * Emitted when the client got shut down
+   */
+  disconnected: () => void;
+
+
+  /**
+   * Emitted when a device auth got created
+   * @param deviceAuth The device auth
+   */
+  'deviceauth:created': (deviceAuth: DeviceAuth) => void;
+
+
+  /**
+   * Emitted when a refresh token got created
+   * @param refreshTokenData The refresh token data
+   */
+  'refreshtoken:created': (refreshTokenData: RefreshTokenData) => void;
+
+
+  /**
+   * Emitted when the client received a friend whisper message
+   * @param message The received friend whipser message
+   */
+  'friend:message': (message: ReceivedFriendMessage) => void;
+
+
+  /**
+   * Emitted when the client recieved a friend presence
+   * @param before The friend's previous presence
+   * @param after The friend's current presence
+   */
+  'friend:presence': (before: FriendPresence | undefined, after: FriendPresence) => void;
+
+
+  /**
+   * Emitted when a friend becomes online
+   * @param friend The friend that became online
+   */
+  'friend:online': (friend: Friend) => void;
+
+
+  /**
+   * Emitted when a friend goes offline
+   * @param friend The friend that went offline
+   */
+  'friend:offline': (friend: Friend) => void;
+
+
+  /**
+   * Emitted when a member in the client's party sent a message in the party chat
+   * @param message The received message
+   */
+  'party:member:message': (message: PartyMessage) => void;
+
+
+  /**
+   * Emitted when a user got added to the client's friend list
+   * @param friend The new friend
+   */
+  'friend:added': (friend: Friend) => void;
+
+
+  /**
+   * Emitted when the client recieved a friendship request
+   * @param pendingFriend The pending friend
+   */
+  'friend:request': (pendingFriend: IncomingPendingFriend) => void;
+
+
+  /**
+   * Emitted when the client sent a friendship request
+   * @param pendingFriend The pending friend
+   */
+  'friend:request:sent': (pendingFriend: OutgoingPendingFriend) => void;
+
+
+  /**
+   * Emitted when the client aborted an outgoing friendship request or when someone aborted an incoming friendship request
+   * @param pendingFriend The previously pending friend
+   */
+  'friend:request:aborted': (pendingFriend: IncomingPendingFriend | OutgoingPendingFriend) => void;
+
+
+  /**
+   * Emitted when the client declined an incoming friendship request or when someone declined an outgoing friendship request
+   * @param pendingFriend The previously pending friend
+   */
+  'friend:request:declined': (pendingFriend: IncomingPendingFriend | OutgoingPendingFriend) => void;
+
+
+  /**
+   * Emitted when a user got removed from the client's friend list
+   * @param friend The friend
+   */
+  'friend:removed': (friend: Friend) => void;
+
+
+  /**
+   * Emitted when a user got added to the client's block list
+   * @param blockedUser The user that got blocked
+   */
+  'user:blocked': (blockedUser: BlockedUser) => void;
+
+
+  /**
+   * Emitted when a user got removed from the client's block list
+   * @param blockedUser The user that got unblocked
+   */
+  'user:unblocked': (blockedUser: BlockedUser) => void;
+
+
+  /**
+   * Emitted when an error occures while processing an incoming xmpp message
+   * @param error The error that occurred
+   */
+  'xmpp:message:error': (error: Error) => void;
+
+
+  /**
+   * Emitted when an error occures while processing an incoming xmpp presence
+   * @param error The error that occurred
+   */
+  'xmpp:presence:error': (error: Error) => void;
+
+
+  /**
+   * Emitted when an error occures while processing an incoming xmpp chat message (either a friend or party message)
+   * @param error The error that occurred
+   */
+  'xmpp:chat:error': (error: Error) => void;
+
+
+  /**
+   * Emitted when the client recieved a party invitation
+   * @param invitation The received party invitation
+   */
+  'party:invite': (invitation: ReceivedPartyInvitation) => void;
+
+
+  /**
+   * Emitted when a party member joined the client party
+   * @param member The member who joined the client's party
+   */
+  'party:member:joined': (member: PartyMember | ClientPartyMember) => void;
+
+
+  /**
+   * Emitted when a party member got updated
+   * @param member The updated party member
+   */
+  'party:member:updated': (member: PartyMember | ClientPartyMember) => void;
+
+
+  /**
+   * Emitted when a party member left the party
+   * @param member The party member
+   */
+  'party:member:left': (member: PartyMember) => void;
+
+
+  /**
+   * Emitted when a party member expired
+   * @param member The party member
+   */
+  'party:member:expired': (member: PartyMember) => void;
+
+
+  /**
+   * Emitted when a party member gets kicked
+   * @param member The party member
+   */
+  'party:member:kicked': (member: PartyMember) => void;
+
+
+  /**
+   * Emitted when a party member disconnected
+   * @param member The party member
+   */
+  'party:member:disconnected': (member: PartyMember) => void;
+
+
+  /**
+   * Emitted when a party member gets promoted
+   * @param member The party member
+   */
+  'party:member:promoted': (member: PartyMember | ClientPartyMember) => void;
+
+
+  /**
+   * Emitted when the client's party gets updated
+   * @param party The party which got updated
+   */
+  'party:updated': (party: ClientParty) => void;
+
+
+  /**
+   * Emitted when a party member requires confirmation
+   * @param confirmation The pending party member confirmation
+   */
+  'party:member:confirmation': (confirmation: PartyMemberConfirmation) => void;
+
+
+  /**
+   * Emitted when a friend requests to join the bots party
+   * @param request The recieved join request
+   */
+  'party:joinrequest': (request: ReceivedPartyJoinRequest) => void;
+
+
+  /**
+   * Emitted when a party member updated their outfit
+   * @param member The member
+   * @param value The new outfit
+   * @param previousValue The previous outfit
+   */
+  'party:member:outfit:updated': (member: PartyMember | ClientPartyMember, value?: string, previousValue?: string) => void;
+
+
+  /**
+   * Emitted when a party member updated their emote
+   * @param member The member
+   * @param value The new emote
+   * @param previousValue The previous emote
+   */
+  'party:member:emote:updated': (member: PartyMember | ClientPartyMember, value?: string, previousValue?: string) => void;
+
+
+  /**
+   * Emitted when a party member updated their backpack
+   * @param member The member
+   * @param value The new backpack
+   * @param previousValue The previous backpack
+   */
+  'party:member:backpack:updated': (member: PartyMember | ClientPartyMember, value?: string, previousValue?: string) => void;
+
+
+  /**
+   * Emitted when a party member updated their pickaxe
+   * @param member The member
+   * @param value The new pickaxe
+   * @param previousValue The previous pickaxe
+   */
+  'party:member:pickaxe:updated': (member: PartyMember | ClientPartyMember, value?: string, previousValue?: string) => void;
+
+
+  /**
+   * Emitted when a party member updated their readiness state
+   * @param member The member
+   * @param value The new readiness state
+   * @param previousValue The previous readiness state
+   */
+  'party:member:readiness:updated': (member: PartyMember | ClientPartyMember, value?: boolean, previousValue?: boolean) => void;
+
+
+  /**
+   * Emitted when a party member updated their match state
+   * @param member The member
+   * @param value The new match state
+   * @param previousValue The previous match state
+   */
+  'party:member:matchstate:updated': (member: PartyMember | ClientPartyMember, value?: MatchMeta, previousValue?: MatchMeta) => void;
+}
+
+
+export type AuthType = 'fortnite' | 'fortniteClientCredentials' | 'launcher';
+
+
+export interface AuthResponse {
+  response?: EpicgamesOAuthData;
+  error?: EpicgamesAPIError | Error;
+}
+
+
+export interface ReauthResponse {
+  response?: {
+    success: boolean;
+  };
+  error?: EpicgamesAPIError;
+}
+
+
+export interface FriendConnection {
+  name?: string;
+}
+
+
+export interface FriendConnections {
+  epic?: FriendConnection;
+  psn?: FriendConnection;
+  nintendo?: FriendConnection;
+}
+
+
+export interface PresenceGameplayStats {
+  kills?: number;
+  fellToDeath?: boolean;
+  serverPlayerCount?: number;
+}
+
+
+export type PendingFriendDirection = 'INCOMING' | 'OUTGOING';
+
+
+export interface StatsPlaylistTypeData {
+  score: number;
+  scorePerMin: number;
+  scorePerMatch: number;
+  wins: number;
+  top3: number;
+  top5: number;
+  top6: number;
+  top10: number;
+  top12: number;
+  top25: number;
+  kills: number;
+  killsPerMin: number;
+  killsPerMatch: number;
+  deaths: number;
+  kd: number;
+  matches: number;
+  winRate: number;
+  minutesPlayed: number;
+  playersOutlived: number;
+  lastModified?: Date;
+}
+
+
+export interface StatsInputTypeData {
+  overall: StatsPlaylistTypeData;
+  solo: StatsPlaylistTypeData;
+  duo: StatsPlaylistTypeData;
+  squad: StatsPlaylistTypeData;
+  ltm: StatsPlaylistTypeData;
+}
+
+
+export interface StatsData {
+  all: StatsInputTypeData;
+  keyboardmouse: StatsInputTypeData;
+  gamepad: StatsInputTypeData;
+  touch: StatsInputTypeData;
+}
+
+
+export interface NewsMOTD {
+  entryType: string;
+  image: string;
+  tileImage: string;
+  videoMute: boolean;
+  hidden: boolean;
+  tabTitleOverride: string;
+  _type: string;
+  title: string;
+  body: string;
+  offerAction: string;
+  videoLoop: boolean;
+  videoStreamingEnabled: boolean;
+  sortingPriority: number;
+  buttonTextOverride?: string;
+  offerId?: string;
+  id: string;
+  videoAutoplay: boolean;
+  videoFullscreen: boolean;
+  spotlight: boolean;
+  videoUID?: string;
+  videoVideoString?: string;
+  playlistId?: string;
+}
+
+
+export interface NewsMessageData {
+  image: string;
+  hidden: boolean;
+  _type: string;
+  adspace: string;
+  title: string;
+  body: string;
+  spotlight: boolean;
+}
+
+
+export interface LightswitchLauncherInfo {
+  appName: string;
+  catalogItemId: string;
+  namespace: string;
+}
+
+
+export interface LightswitchData {
+  serviceInstanceId: string;
+  status: string;
+  message: string;
+  maintenanceUri?: string;
+  overrideCatalogIds: string[];
+  allowedActions: string[];
+  banned: boolean;
+  launcherInfoDTO: LightswitchLauncherInfo;
+}
+
+
+export interface EpicgamesServerStatusData {
+  page: {
+    id: string;
+    name: string;
+    url: string;
+    time_zone: string;
+    updated_at: string;
+  };
+  components: {
+    id: string;
+    name: string;
+    status: string;
+    created_at: Date;
+    updated_at: Date;
+    position: number;
+    description?: any;
+    showcase: boolean;
+    start_date: string;
+    group_id: string;
+    page_id: string;
+    group: boolean;
+    only_show_if_degraded: boolean;
+    components: string[];
+  }[];
+  incidents: any[];
+  scheduled_maintenances: any[];
+  status: {
+    indicator: string;
+    description: string;
+  };
+}
+
+
+export interface EpicgamesServerStatusIncidentUpdate {
+  id: string;
+  body: string;
+  createdAt: Date;
+  displayAt: Date;
+  status: string;
+  updatedAt: Date;
+}
+
+
+export interface MessageData {
+  content: string;
+  author: Friend | PartyMember | ClientPartyMember | ClientUser;
+  id: string;
+  sentAt?: Date;
+}
+
+
+export interface FriendMessageData extends MessageData {
+  author: Friend | ClientUser;
+}
+
+
+export interface PartyMessageData extends MessageData {
+  author: PartyMember | ClientPartyMember;
+  party: ClientParty;
+}
+
+
+export interface PendingFriendData {
+  accountId: string;
+  created: string;
+  favorite: boolean;
+  displayName: string;
+}
+
+
+export interface ExternalAuth {
+  accountId: string;
+  type: string;
+  externalAuthId: string;
+  externalAuthIdType: string;
+  externalDisplayName?: string;
+  authIds: {
+    id: string;
+    type: string;
+  }[];
+}
+
+
+export interface ExternalAuths {
+  github?: ExternalAuth;
+  twitch?: ExternalAuth;
+  steam?: ExternalAuth;
+  psn?: ExternalAuth;
+  xbl?: ExternalAuth;
+  nintendo?: ExternalAuth;
+}
+
+
+export interface UserData {
+  id: string;
+  displayName?: string;
+  externalAuths?: ExternalAuths;
+}
+
+
+export interface ClientUserData extends UserData {
+  name: string;
+  email: string;
+  failedLoginAttempts: number;
+  lastLogin: string;
+  numberOfDisplayNameChanges: number;
+  ageGroup: string;
+  headless: boolean;
+  country: string;
+  lastName: string;
+  phoneNumber: string;
+  preferredLanguage: string;
+  lastDisplayNameChange: string;
+  canUpdateDisplayName: boolean;
+  tfaEnabled: boolean;
+  emailVerified: boolean;
+  minorVerified: boolean;
+  minorExpected: boolean;
+  minorStatus: string;
+}
+
+
+export interface CreatorCodeData {
+  slug: string;
+  owner: User;
+  status: 'ACTIVE' | 'DISABLED';
+  verified: boolean;
+}
+
+
+export interface FriendData extends UserData {
+  created: string;
+  favorite: boolean;
+  displayName?: string;
+  connections?: FriendConnections;
+  mutual?: number;
+  alias: string;
+  note: string;
+}
+
+
+export interface FriendPresenceData {
+  Status?: string;
+  bIsPlaying?: boolean;
+  bIsJoinable?: boolean;
+  bHasVoiceSupport?: boolean;
+  SessionId?: string;
+  ProductName?: string;
+  Properties?: {
+    FortBasicInfo_j?: {
+      homeBaseRating?: number;
+    };
+    FortLFG_I?: string;
+    FortPartySize_i?: number;
+    FortSubGame_i?: number;
+    InUnjoinableMatch_b?: boolean;
+    FortGameplayStats_j?: {
+      state: string;
+      playlist: string;
+      numKills: number;
+      bFellToDeath: boolean;
+    };
+    'party.joininfodata.286331153_j'?: {
+      bIsPrivate?: boolean;
+    };
+    GamePlaylistName_s?: string;
+    Event_PlayersAlive_s?: string;
+    Event_PartySize_s?: string;
+    Event_PartyMaxSize_s?: string;
+    GameSessionJoinKey_s?: string;
+    ServerPlayerCount_i?: string;
+  };
+}
+
+
+export interface PartyMemberData {
+  id: string;
+  account_id: string;
+  account_dn?: string;
+  meta: Schema;
+  revision: number;
+  updated_at: string;
+  joined_at: string;
+  role: string;
+}
+
+
+export interface PartyMemberUpdateData {
+  account_id: string;
+  account_dn?: string;
+  revision: number;
+  member_state_updated: Schema;
+  member_state_removed: string[];
+}
+
+
+export interface PartyData {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  config: {
+    type: string;
+    joinability: string;
+    discoverability: string;
+    sub_type: string;
+    max_size: number;
+    invite_ttl: number;
+    join_confirmation: boolean;
+    intention_ttl: number;
+  };
+  members: PartyMemberData[];
+  meta: PartySchema;
+  invites: any[];
+  revision: number;
+}
+
+
+export interface PartyUpdateData {
+  revision: number;
+  party_state_updated: Schema;
+  party_state_removed: string[];
+  party_privacy_type: 'OPEN' | 'INVITE_AND_FORMER';
+  max_number_of_members: number;
+  party_sub_type: 'default';
+  party_type: 'DEFAULT';
+  invite_ttl_seconds: number;
+  discoverability: 'ALL' | 'INVITED_ONLY';
+}
+
+
+export interface Island {
+  linkId?: {
+    mnemonic?: string;
+    version?: number;
+  };
+  woldId?: {
+    iD?: string,
+    ownerId?: string;
+    name?: string;
+  };
+  sessionId?: string;
+  joinInfo?: {
+    islandJoinability?: string;
+    bIsWorldJoinable?: boolean;
+    sessionKey?: string;
+  };
+}
+
+
+export interface Cosmetics {
+  outfit?: { id: string; variants?: CosmeticVariant[]; enlightment?: CosmeticEnlightment };
+  backpack?: { id: string; variants?: CosmeticVariant[]; path?: string };
+  pickaxe?: { id: string; variants?: CosmeticVariant[]; path?: string };
+  shoes?: { id: string; path?: string };
+}
+
+
+export interface CosmeticVariant {
+  channel: string;
+  variant: string;
+  dE?: number;
+}
+
+
+export interface CosmeticVariantMeta {
+  i: {
+    v: string;
+    c: string;
+    dE: number;
+  }[];
+}
+
+
+export interface CosmeticsVariantMeta {
+  athenaCharacter?: CosmeticVariantMeta;
+  athenaBackpack?: CosmeticVariantMeta;
+  athenaPickaxe?: CosmeticVariantMeta;
+  athenaSkyDiveContrail?: CosmeticVariantMeta;
+}
+
+
+export type CosmeticEnlightment = [number, number];
+
+
+export interface BannerMeta {
+  bannerIconId: string;
+  bannerColorId: string;
+}
+
+
+export interface BattlePassMeta {
+  bHasPurchasedPass: boolean;
+  passLevel: number;
+  selfBoostXp: number;
+  friendBoostXp: number;
+}
+
+
+export interface AssistedChallengeMeta {
+  questItemDef: string;
+  objectivesCompleted: number;
+}
+
+
+export type Region = 'EU' | 'NAE' | 'NAW' | 'BR' | 'ME' | 'ASIA' | 'OCE';
+
+
+export type FullPlatform = 'Windows' | 'Android' | 'PS4' | 'XboxOne' | 'XSX' | 'PS5' | 'Switch' | 'Windows' | 'Mac';
+
+
+export type SentMessageType = 'PARTY' | 'FRIEND';
+
+
+export interface TournamentColors {
+  titleColor?: string;
+  backgroundTextColor?: string;
+  backgroundRightColor?: string;
+  backgroundLeftColor?: string;
+  shadowColor?: string;
+  posterFadeColor?: string;
+  baseColor?: string;
+  highlightColor?: string;
+}
+
+
+export interface TournamentImages {
+  loadingScreenImage?: string;
+  posterBackImage?: string;
+  posterFrontImage?: string;
+  playlistTileImage?: string;
+}
+
+
+export interface TournamentTexts {
+  pinEarnedText?: string;
+  pinScoreRequirement?: number;
+  scheduleInfo?: string;
+  flavorDescription?: string;
+  shortFormatTitle?: string;
+  titleLine1?: string;
+  titleLine2?: string;
+  detailsDescription?: string;
+  longFormatTitle?: string;
+  backgroundTitle?: string;
+}
+
+
+export interface TournamentWindowTemplate {
+  windowId: string;
+  templateData: TournamentWindowTemplateData;
+}
+
+
+export interface PresencePartyData {
+  bIsPrivate?: boolean;
+  sourceId?: string;
+  sourceDisplayName?: string;
+  sourcePlatform?: string;
+  partyId?: string;
+  partyTypeId?: number;
+  key?: 'k';
+  appId?: string;
+  buildId?: string;
+  partyFlags?: number;
+  notAcceptingReason?: number;
+  pc?: number;
+}
+
+
+export type UserSearchPlatform = 'epic' | 'psn' | 'xbl' | 'steam';
+
+
+export type UserSearchMatchType = 'exact' | 'prefix';
+
+
+export interface UserSearchResultMatch {
+  value: string;
+  platform: UserSearchPlatform;
+}
+
+
+export interface BlurlStream {
+  languages: {
+    language: string;
+    url: string;
+    variants: {
+      data: {
+        codecs: string[];
+        bandwidth: number;
+        resolution: string;
+      };
+      type: 'video' | 'audio';
+      url: string;
+      stream: Buffer;
+    }[];
+  }[];
+  data: {
+    subtitles: any;
+    ucp?: string;
+    audioonly: boolean;
+    aspectratio?: string;
+    partysync: boolean;
+    lrcs: any;
+    duration?: number;
+  };
+}
+
+
+export interface ReplayEvent {
+  Id: string;
+  Group: string;
+  Metadata: string;
+  Time1: number;
+  Time2: number;
+  data: Buffer;
+}
+
+
+export interface ReplayDataChunk {
+  Id: string;
+  Time1: number;
+  Time2: number;
+  SizeInBytes: number;
+  data: Buffer;
+}
+
+
+export interface ReplayCheckpoint {
+  Id: string;
+  Group: string;
+  Metadata: string;
+  Time1: number;
+  Time2: number;
+  data: Buffer;
+}
+
+
+export interface ReplayData {
+  ReplayName: string;
+  LengthInMS: number;
+  NetworkVersion: number;
+  Changelist: number;
+  FriendlyName: string;
+  Timestamp: Date;
+  bIsLive: boolean;
+  bCompressed: boolean;
+  DesiredDelayInSeconds: number;
+  Checkpoints?: ReplayCheckpoint[];
+  Events?: ReplayEvent[];
+  DataChunks?: ReplayDataChunk[];
+  Header: Buffer;
+}
+
+
+export type ReplayDataType = 'EVENT' | 'DATACHUNK' | 'CHECKPOINT';
+
+
+export interface ReplayDownloadConfig {
+  /**
+   * Which replay data types to download.
+   * EVENT data contains basic information like eliminations, you will only need EVENT data for ThisNils/node-replay-reader.
+   * DATACHUNK data contains information that is required for most parsing libraries.
+   * CHECKPOINT data contains information that is pretty much only useful if you want to use the replay ingame.
+   * By default, only events and data chunks are downloaded
+   */
+  dataTypes: ReplayDataType[];
+
+
+  /**
+   * Whether a placeholder for AthenaMatchStats and AthenaMatchTeamStats should be added.
+   * Required if you want to use the replay ingame, otherwise useless.
+   * By default, this is set to false
+   */
+  addStatsPlaceholder: boolean;
+}
+
+
+export interface ReplayDownloadOptions extends Partial<ReplayDownloadConfig> { }
+
+
+export interface EventTokensResponse {
+  user: User;
+  tokens: string[];
+}
+
+
+export interface BRAccountLevel {
+  level: number;
+  progress: number;
+}
+
+
+export interface BRAccountLevelData {
+  user: User;
+  level: BRAccountLevel;
+}
+
+
+export interface TournamentSessionMetadata {
+  changelist: number;
+  checkpoints: ReplayCheckpoint[];
+  dataChunks: ReplayDataChunk[];
+  desiredDelayInSeconds: number;
+  events: ReplayEvent[];
+  friendlyName: string;
+  lengthInMS: number;
+  networkVersion: number;
+  replayName: string;
+  timestamp: Date;
+  isCompressed: boolean;
+  isLive: boolean;
+}
+
+
+export interface STWFORTStats {
+  fortitude: number;
+  resistance: number;
+  offense: number;
+  tech: number;
+}
+
+
+export type STWSurvivorType = 'special' | 'manager' | 'basic';
+
+
+export type STWItemRarity = 'c' | 'uc' | 'r' | 'vr' | 'sr' | 'ur';
+
+
+export type STWItemTier = 1 | 2 | 3 | 4 | 5 | 6;
+
+
+export type STWSurvivorGender = 'male' | 'female';
+
+
+export interface STWSurvivorSquads {
+  trainingteam: STWSurvivor[];
+  fireteamalpha: STWSurvivor[];
+  closeassaultsquad: STWSurvivor[];
+  thethinktank: STWSurvivor[];
+  emtsquad: STWSurvivor[];
+  corpsofengineering: STWSurvivor[];
+  scoutingparty: STWSurvivor[];
+  gadgeteers: STWSurvivor[];
+}
+
+
+export type STWSurvivorSquadType = 'medicine' | 'arms' | 'synthesis' | 'scavenging';
+
+
+export interface STWSurvivorSquadData {
+  id: string;
+  name: keyof STWSurvivorSquads;
+  type: STWSurvivorSquadType;
+  slotIdx: number;
+}
+
+
+export interface STWStatsNodeCostsData {
+  [key: string]: {
+    [key: string]: number;
+  };
+}
+
+
+export interface STWStatsSTWLoadoutData {
+  selectedHeroLoadout: string;
+  modeLoadouts: string[];
+  activeLoadoutIndex: number;
+}
+
+
+export interface STWStatsBRLoadoutData {
+  loadouts: string[];
+  lastAppliedLoadout: string;
+  useRandomLoadout: boolean;
+}
+
+
+export interface STWStatsMissionAlertRedemptionData {
+  missionAlertId: string;
+  redemptionDateUtc: Date;
+  evictClaimDataAfterUtc: Date;
+}
+
+
+export interface STWStatsQuestData {
+  dailyLoginInterval: Date;
+  dailyQuestRerolls?: number;
+  poolStats: {
+    stats: {
+      poolName: string;
+      nextRefresh: Date;
+      rerollsRemaining: number;
+      questHistory: string[];
+    }[];
+    dailyLoginInterval: Date;
+    lockouts: {
+      lockoutName: string;
+    }[];
+  };
+}
+
+
+export interface STWStatsGameplayStatData {
+  statName: string;
+  statValue: number;
+}
+
+
+export interface STWStatsClientSettingsData {
+  pinnedQuestInstances?: any[];
+}
+
+
+export interface STWStatsResearchLevelsData {
+  technology: number;
+  offense: number;
+  fortitude: number;
+  resistance: number;
+}
+
+
+export interface STWStatsEventCurrencyData {
+  templateId: string;
+  cf: number;
+}
+
+
+export interface STWStatsXPData {
+  total: number;
+  overflow: number;
+  lost: number;
+}
+
+
+export interface STWStatsDailyRewardsData {
+  nextDefaultReward: number;
+  totalDaysLoggedIn: number;
+  lastClaimDate: Date;
+  additionalSchedules?: {
+    [key: string]: {
+      rewardsClaimed: number;
+      claimedToday: boolean;
+    };
+  };
+}
+
+
+export interface STWLockerSlotsData {
+  Pickaxe: STWProfileLockerSlotData;
+  MusicPack?: STWProfileLockerSlotData;
+  Character?: STWProfileLockerSlotData;
+  ItemWrap: STWProfileLockerSlotData;
+  Backpack: STWProfileLockerSlotData;
+  Dance: STWProfileLockerSlotData;
+  LoadingScreen: STWProfileLockerSlotData;
+}
+
+
+export interface STWLockerBannerData {
+  icon: string;
+  color: string;
+}
+
+
+export type STWHeroType = 'commando' | 'constructor' | 'outlander' | 'ninja';
+
+
+export type STWSchematicType = 'ranged' | 'melee' | 'trap' | 'other';
+
+
+export type STWSchematicRangedSubType = 'assault' | 'launcher' | 'pistol' | 'shotgun' | 'smg' | 'sniper';
+
+
+export type STWSchematicMeleeSubType = 'blunt' | 'blunt_hammer' | 'edged_axe' | 'edged_scythe' | 'edged_sword' | 'piercing_spear';
+
+
+export type STWSchematicTrapSubType = 'ceiling' | 'floor' | 'wall';
+
+
+export type STWSchematicSubType = STWSchematicRangedSubType | STWSchematicMeleeSubType | STWSchematicTrapSubType;
+
+
+export type STWSchematicAlterationRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+
+
+export type STWSchematicEvoType = 'ore' | 'crystal';
+
+
+export interface StatsLevelData {
+  [key: string]: {
+    level: number;
+    progress: number;
+  };
+}
+
+
+export interface ArenaDivisionData {
+  [key: string]: number;
+}
+
+
+export interface NewsMessageVideoData {
+  videoAutoplay: boolean;
+  videoFullscreen: boolean;
+  videoLoop: boolean;
+  videoMute: boolean;
+  videoStreamingEnabled: boolean;
+  videoVideoString: string;
+  videoUID: string;
+}
+
+
+export interface NewsMessagePlaylist {
+  id: string;
+}
+
+
+export interface NewsMessageOffer {
+  id: string;
+  action: string;
+}
+
+
+export interface ImageData {
+  url: string;
+  width?: number;
+  height?: number;
+}
+
+
+export interface STWWorldInfoData {
+  theaters: STWTheaterData[];
+  missions: STWMissionData[];
+  missionAlerts: STWMissionAlertData[];
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Auth                                    */
+/* -------------------------------------------------------------------------- */
+
+
+export interface AuthData {
+  access_token: string;
+  account_id: string;
+  client_id: string;
+  expires_at: string;
+  expires_in: number;
+  token_type: string;
+}
+
+
+export interface LauncherAuthData extends AuthData {
+  refresh_expires: number;
+  refresh_expires_at: string;
+  refresh_token: string;
+  internal_client: boolean;
+  client_service: string;
+  scope: string[];
+  displayName: string;
+  app: string;
+  in_app_id: string;
+}
+
+
+export interface FortniteAuthData extends AuthData {
+  refresh_expires: number;
+  refresh_expires_at: string;
+  refresh_token: string;
+  internal_client: boolean;
+  client_service: string;
+  displayName: string;
+  app: string;
+  in_app_id: string;
+  device_id: string;
+}
+
+
+export interface FortniteClientCredentialsAuthData extends AuthData {
+  internal_client: boolean;
+  client_service: string;
+  product_id: string;
+  application_id: string;
+}
+
+
+export interface EOSAuthData extends AuthData {
+  refresh_expires: number;
+  refresh_expires_at: string;
+  refresh_token: string;
+  application_id: string;
+  merged_accounts: string[];
+  scope: string;
+}
+
+
+export interface AuthSessionStore<K, V> extends Collection<K, V> {
+  get(key: AuthSessionStoreKey.Fortnite): FortniteAuthSession | undefined;
+  get(key: AuthSessionStoreKey.Launcher): LauncherAuthSession | undefined;
+  get(key: AuthSessionStoreKey.FortniteEOS): EOSAuthSession | undefined;
+  get(key: AuthSessionStoreKey.FortniteClientCredentials): FortniteClientCredentialsAuthSession | undefined;
+  get(key: K): V | undefined;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/*                                    EOS CHAT                                    */
+/* ------------------------------------------------------------------------------ */
+
+
+/**
+ * Represents a chat message data
+ */
+export interface ChatMessagePayload {
+  /**
+   * The message body, should not be empty and not exceed the limit of 256 characters. Please note that emojis count as 2 characters.
+   */
+  body: string;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/*                                    EOS Connect STOMP                                    */
+/* --------------------------------------------------------------------------------------- */
+interface BaseEOSConnectMessage {
+  correlationId: string;
+  timestamp: number; // unix
+  id?: string;
+  connectionId?: string;
+}
+
+
+export interface EOSConnectCoreConnected extends BaseEOSConnectMessage {
+  type: 'core.connect.v1.connected';
+}
+
+
+export interface EOSConnectCoreConnectFailed extends BaseEOSConnectMessage {
+  message: string;
+  statusCode: number; // i.e. 4005
+  type: 'core.connect.v1.connect-failed';
+}
+
+
+export interface EOSConnectChatMemberLeftMessage extends BaseEOSConnectMessage {
+  payload: {
+    // deployment id
+    namespace: string;
+    conversationId: string;
+    members: string[];
+  };
+  type: 'social.chat.v1.MEMBERS_LEFT';
+}
+
+
+export interface EOSConnectChatNewMsgMessage extends BaseEOSConnectMessage {
+  payload: {
+    // deployment id
+    namespace: string;
+    conversation: {
+      conversationId: string;
+      type: string; // i.e. 'party'
+    };
+    message: {
+      body: string;
+      senderId: string;
+      time: number;
+    }
+  };
+  type: 'social.chat.v1.NEW_MESSAGE';
+}
+
+
+export interface EOSConnectChatConversionCreatedMessage extends BaseEOSConnectMessage {
+  payload: {
+    // deployment id
+    namespace: string;
+    conversationId: string;
+    type: string; // i.e. 'party'
+    members: string[];
+  };
+  type: 'social.chat.v1.CONVERSATION_CREATED';
+}
+
+
+export interface EOSConnectChatNewWhisperMessage extends BaseEOSConnectMessage {
+  payload: {
+    // deployment id
+    namespace: string;
+    message: {
+      body: string;
+      senderId: string;
+      time: number;
+    }
+  };
+  type: 'social.chat.v1.NEW_WHISPER';
+}
+
+
+export type EOSConnectMessage =
+  // Core
+  EOSConnectCoreConnected
+  | EOSConnectCoreConnectFailed
+  // Social chat
+  | EOSConnectChatConversionCreatedMessage
+  | EOSConnectChatNewMsgMessage
+  | EOSConnectChatMemberLeftMessage
+  | EOSConnectChatNewWhisperMessage; /* eslint-disable @typescript-eslint/indent */
+/* eslint-disable no-restricted-syntax */
+import { Collection } from '@discordjs/collection';
+import { promises as fs } from 'fs';
+import { URL } from 'url';
+import Base from '../Base';
+import Endpoints from '../../resources/Endpoints';
+import { AuthSessionStoreKey } from '../../resources/enums';
+import FortniteAuthSession from './FortniteAuthSession';
+import LauncherAuthSession from './LauncherAuthSession';
+import AuthClients from '../../resources/AuthClients';
+import { resolveAuthObject, resolveAuthString } from '../util/Util';
+import EpicgamesAPIError from '../exceptions/EpicgamesAPIError';
+import FortniteClientCredentialsAuthSession from './FortniteClientCredentialsAuthSession';
+import EOSAuthSession from './EOSAuthSession';
+import type {
+  AuthClient, AuthStringResolveable, DeviceAuthResolveable,
+  DeviceAuthWithSnakeCaseSupport, AuthSessionStore,
+} from '../../resources/structs';
+import type Client from '../Client';
+
+
+type AuthSessionStoreType = AuthSessionStore<AuthSessionStoreKey,
+  FortniteAuthSession
+  | LauncherAuthSession
+  | FortniteClientCredentialsAuthSession
+  | EOSAuthSession>;
+
+
+/**
+ * Represents the client's authentication manager
+ * @private
+ */
+class Auth extends Base {
+  /**
+   * The client's auth sessions
+   */
+  public sessions: AuthSessionStoreType;
+
+
+  /**
+   * @param client The main client
+   */
+  constructor(client: Client) {
+    super(client);
+
+
+    this.sessions = new Collection() as AuthSessionStoreType;
+  }
+
+
+  /**
+   * Authenticates the client against EpicGames' API
+   */
+  public async authenticate() {
+    this.client.debug('[AUTH] Authenticating...');
+    const authStartTime = Date.now();
+
+
+    const authClient = this.client.config.auth.authClient!;
+    const authCreds = this.client.config.auth;
+
+
+    if (authCreds.launcherRefreshToken) {
+      await this.launcherRefreshTokenAuthenticate(authCreds.launcherRefreshToken, authClient);
+    } else if (authCreds.deviceAuth) {
+      await this.deviceAuthAuthenticate(authCreds.deviceAuth, authClient);
+    } else if (authCreds.refreshToken) {
+      await this.refreshTokenAuthenticate(authCreds.refreshToken, authClient);
+    } else if (authCreds.exchangeCode) {
+      await this.exchangeCodeAuthenticate(authCreds.exchangeCode, authClient);
+    } else if (authCreds.authorizationCode) {
+      await this.authorizationCodeAuthenticate(authCreds.authorizationCode, authClient);
+    } else {
+      throw new Error('No valid auth method found! Please provide one in the client config');
+    }
+
+
+    if ((!authCreds.launcherRefreshToken && this.client.listenerCount('refreshtoken:created') > 0)
+      || (authCreds.createLauncherSession && !this.sessions.has(AuthSessionStoreKey.Launcher))) {
+      const exchangeCode = await this.sessions.get(AuthSessionStoreKey.Fortnite)!.createExchangeCode();
+
+
+      const launcherSession = await LauncherAuthSession.create(
+        this.client,
+        AuthClients.launcherAppClient2.clientId,
+        AuthClients.launcherAppClient2.secret,
+        {
+          grant_type: 'exchange_code',
+          exchange_code: exchangeCode,
+          token_type: 'eg1',
+        },
+      );
+
+
+      this.sessions.set(AuthSessionStoreKey.Launcher, launcherSession);
+    }
+
+
+    if (this.client.config.auth.killOtherTokens) {
+      await this.client.http.epicgamesRequest({
+        method: 'DELETE',
+        url: `${Endpoints.OAUTH_TOKEN_KILL_MULTIPLE}?killType=OTHERS_ACCOUNT_CLIENT_SERVICE`,
+      }, AuthSessionStoreKey.Fortnite);
+    }
+
+
+    if (this.client.config.auth.checkEULA) {
+      const eulaCheck = await this.acceptEULA();
+      if (!eulaCheck.alreadyAccepted) this.client.debug('[AUTH] Successfully accepted the EULA');
+    }
+
+
+    if (!authCreds.deviceAuth && this.client.listenerCount('deviceauth:created') > 0) {
+      const deviceauth = await this.createDeviceAuth();
+
+
+      const deviceAuth = {
+        accountId: deviceauth.accountId,
+        deviceId: deviceauth.deviceId,
+        secret: deviceauth.secret,
+      };
+
+
+      this.client.emit('deviceauth:created', deviceAuth);
+    }
+
+
+    const fortniteClientCredsSession = await FortniteClientCredentialsAuthSession.create(
+      this.client,
+      AuthClients[authClient].clientId,
+      AuthClients[authClient].secret,
+      {
+        grant_type: 'client_credentials',
+        token_type: 'eg1',
+      },
+    );
+
+
+    this.sessions.set(AuthSessionStoreKey.FortniteClientCredentials, fortniteClientCredsSession);
+
+
+    // only create eos token if we connect to stomp
+    if (this.client.config.connectToStompEOSConnect) {
+      await this.fortniteEOSAuthenticate();
+    }
+
+
+    this.client.debug(`[AUTH] Authentification successful (${((Date.now() - authStartTime) / 1000).toFixed(2)}s)`);
+  }
+
+
+  /**
+   * Kills all active auth sessions
+   */
+  public async revokeAllTokens() {
+    await Promise.all([...this.sessions.filter((s, k) => k !== AuthSessionStoreKey.Launcher).values()].map((s) => s.revoke()));
+  }
+
+
+  /**
+   * Accepts the Fortnite End User License Agreement (EULA)
+   */
+  private async acceptEULA() {
+    const EULAdata = await this.client.http.epicgamesRequest({
+      url: `${Endpoints.INIT_EULA}/account/${this.sessions.get(AuthSessionStoreKey.Fortnite)!.accountId}`,
+    }, AuthSessionStoreKey.Fortnite);
+
+
+    if (!EULAdata) return { alreadyAccepted: true };
+
+
+    await this.client.http.epicgamesRequest({
+      method: 'POST',
+      url: `${Endpoints.INIT_EULA}/version/${EULAdata.version}/account/`
+        + `${this.sessions.get(AuthSessionStoreKey.Fortnite)!.accountId}/accept?locale=${EULAdata.locale}`,
+    }, AuthSessionStoreKey.Fortnite);
+
+
+    try {
+      await this.client.http.epicgamesRequest({
+        method: 'POST',
+        url: `${Endpoints.INIT_GRANTACCESS}/${this.sessions.get(AuthSessionStoreKey.Fortnite)!.accountId}`,
+      }, AuthSessionStoreKey.Fortnite);
+    } catch (e) {
+      if (e instanceof EpicgamesAPIError && e.message === 'Client requested access grant but already has the requested access entitlement') {
+        return { alreadyAccepted: true };
+      }
+    }
+
+
+    return { alreadyAccepted: false };
+  }
+
+
+  /**
+   * Creates a device auth
+   */
+  private async createDeviceAuth() {
+    return this.client.http.epicgamesRequest({
+      method: 'POST',
+      url: `${Endpoints.OAUTH_DEVICE_AUTH}/${this.sessions.get(AuthSessionStoreKey.Fortnite)?.accountId}/deviceAuth`,
+    }, AuthSessionStoreKey.Fortnite);
+  }
+
+
+  /**
+   * Authentication via a device auth
+   * @param deviceAuthResolvable A resolvable device auth
+   */
+  private async deviceAuthAuthenticate(deviceAuthResolvable: DeviceAuthResolveable, authClient: AuthClient) {
+    const deviceAuth: DeviceAuthWithSnakeCaseSupport = await resolveAuthObject(deviceAuthResolvable);
+
+
+    const fortniteSession = await FortniteAuthSession.create(this.client, AuthClients[authClient].clientId, AuthClients[authClient].secret, {
+      grant_type: 'device_auth',
+      device_id: deviceAuth.deviceId ?? deviceAuth.device_id,
+      account_id: deviceAuth.accountId ?? deviceAuth.account_id,
+      secret: deviceAuth.secret,
+      token_type: 'eg1',
+    });
+
+
+    this.sessions.set(AuthSessionStoreKey.Fortnite, fortniteSession);
+  }
+
+
+  /**
+   * Authentication via an exchange code
+   * @param exchangeCodeResolvable A resolvable exchange code
+   */
+  private async exchangeCodeAuthenticate(exchangeCodeResolvable: AuthStringResolveable, authClient: AuthClient) {
+    const exchangeCode = await resolveAuthString(exchangeCodeResolvable);
+
+
+    const fortniteSession = await FortniteAuthSession.create(this.client, AuthClients[authClient].clientId, AuthClients[authClient].secret, {
+      grant_type: 'exchange_code',
+      exchange_code: exchangeCode,
+      token_type: 'eg1',
+    });
+
+
+    this.sessions.set(AuthSessionStoreKey.Fortnite, fortniteSession);
+  }
+
+
+  /**
+   * Authentication via an authorization code
+   * @param authorizationCodeResolvable A resolvable authorization code
+   */
+  private async authorizationCodeAuthenticate(authorizationCodeResolvable: AuthStringResolveable, authClient: AuthClient) {
+    let authorizationCode: string | undefined;
+
+
+    switch (typeof authorizationCodeResolvable) {
+      case 'function':
+        authorizationCode = await authorizationCodeResolvable();
+        break;
+      case 'string':
+        if (authorizationCodeResolvable.length === 32) {
+          authorizationCode = authorizationCodeResolvable;
+        } else if (authorizationCodeResolvable.includes('?code=')) {
+          const url = new URL(authorizationCodeResolvable);
+          authorizationCode = url.searchParams.get('code') ?? undefined;
+        } else {
+          authorizationCode = (await fs.readFile(authorizationCodeResolvable)).toString();
+        }
+        break;
+      default:
+        throw new TypeError(`The type "${typeof authorizationCodeResolvable}" does not resolve to a valid auth string`);
+    }
+
+
+    const fortniteSession = await FortniteAuthSession.create(this.client, AuthClients[authClient].clientId, AuthClients[authClient].secret, {
+      grant_type: 'authorization_code',
+      code: authorizationCode,
+      token_type: 'eg1',
+    });
+
+
+    this.sessions.set(AuthSessionStoreKey.Fortnite, fortniteSession);
+  }
+
+
+  /**
+   * Authentication via a refresh token
+   * @param refreshTokenResolvable A resolvable refresh token
+   */
+  private async refreshTokenAuthenticate(refreshTokenResolvable: AuthStringResolveable, authClient: AuthClient) {
+    const refreshToken = await resolveAuthString(refreshTokenResolvable);
+
+
+    const fortniteSession = await FortniteAuthSession.create(this.client, AuthClients[authClient].clientId, AuthClients[authClient].secret, {
+      grant_type: 'refresh_token',
+      refresh_token: refreshToken,
+      token_type: 'eg1',
+    });
+
+
+    this.sessions.set(AuthSessionStoreKey.Fortnite, fortniteSession);
+  }
+
+
+  /**
+   * Authentication via a launcher refresh token
+   * @param refreshTokenResolvable A resolvable refresh token
+   */
+  private async launcherRefreshTokenAuthenticate(refreshTokenResolvable: AuthStringResolveable, authClient: AuthClient) {
+    const refreshToken = await resolveAuthString(refreshTokenResolvable);
+
+
+    const launcherSession = await LauncherAuthSession.create(
+      this.client,
+      AuthClients.launcherAppClient2.clientId,
+      AuthClients.launcherAppClient2.secret,
+      {
+        grant_type: 'refresh_token',
+        refresh_token: refreshToken,
+        token_type: 'eg1',
+      },
+    );
+
+
+    this.sessions.set(AuthSessionStoreKey.Launcher, launcherSession);
+
+
+    const exchangeCode = await launcherSession.createExchangeCode();
+
+
+    const fortniteSession = await FortniteAuthSession.create(this.client, AuthClients[authClient].clientId, AuthClients[authClient].secret, {
+      grant_type: 'exchange_code',
+      exchange_code: exchangeCode,
+      token_type: 'eg1',
+    });
+
+
+    this.sessions.set(AuthSessionStoreKey.Fortnite, fortniteSession);
+  }
+
+
+  private async fortniteEOSAuthenticate() {
+    const exchangeCode = await this.sessions.get(AuthSessionStoreKey.Fortnite)!.createExchangeCode();
+    const authClient = this.client.config.auth.authClient!;
+
+
+    const eosSession = await EOSAuthSession.create(
+      this.client,
+      AuthClients[authClient].clientId,
+      AuthClients[authClient].secret,
+      {
+        grant_type: 'exchange_code',
+        exchange_code: exchangeCode,
+        token_type: 'epic_id',
+        deployment_id: this.client.config.eosDeploymentId,
+      },
+    );
+
+
+    this.sessions.set(AuthSessionStoreKey.FortniteEOS, eosSession);
+  }
+}
+
+
+export default Auth; import Base from '../Base';
+import AsyncLock from '../util/AsyncLock';
+import type Client from '../Client';
+import type { AuthData } from '../../resources/structs';
+import type { AuthSessionType } from '../../resources/enums';
+
+
+/**
+ * Represents an auth session
+ */
+abstract class AuthSession<T extends AuthSessionType> extends Base {
+  /**
+   * The access token
+   */
+  public accessToken: string;
+
+
+  /**
+   * The time when the access token expires
+   */
+  public expiresAt: Date;
+
+
+  /**
+   * The account id
+   */
+  public accountId: string;
+
+
+  /**
+   * The client id
+   */
+  public clientId: string;
+
+
+  /**
+   * The auth session type
+   */
+  public type: T;
+
+
+  /**
+   * The client secret
+   */
+  public clientSecret: string;
+
+
+  /**
+   * The refresh lock
+   */
+  public refreshLock: AsyncLock;
+  constructor(client: Client, data: AuthData, clientSecret: string, type: T) {
+    super(client);
+
+
+    this.accessToken = data.access_token;
+    this.expiresAt = new Date(data.expires_at);
+    this.accountId = data.account_id;
+    this.clientId = data.client_id;
+
+
+    this.type = type;
+    this.clientSecret = clientSecret;
+
+
+    this.refreshLock = new AsyncLock();
+  }
+
+
+  public get isExpired() {
+    return this.expiresAt.getTime() < Date.now();
+  }
+}
+
+
+export default AuthSession; import { URLSearchParams } from 'url';
+import AuthSession from './AuthSession';
+import { AuthSessionType } from '../../resources/enums';
+import Endpoints from '../../resources/Endpoints';
+import type Client from '../Client';
+import type { EOSAuthData } from '../../resources/structs';
+
+
+class EOSAuthSession extends AuthSession<AuthSessionType.EOS> {
+  public refreshToken: string;
+  public refreshTokenExpiresAt: Date;
+  public applicationId: string;
+  public mergedAccounts: string[];
+  public scope: string;
+
+
+  public refreshTimeout?: NodeJS.Timeout;
+
+
+  constructor(client: Client, data: EOSAuthData, clientSecret: string) {
+    super(client, data, clientSecret, AuthSessionType.EOS);
+
+
+    this.applicationId = data.application_id;
+    this.mergedAccounts = data.merged_accounts;
+    this.scope = data.scope;
+    this.refreshToken = data.refresh_token;
+    this.refreshTokenExpiresAt = new Date(data.refresh_expires_at);
+  }
+
+
+  public async checkIsValid(forceVerify = false) {
+    if (!forceVerify && this.isExpired) {
+      return false;
+    }
+
+
+    const validation = await this.client.http.epicgamesRequest({
+      method: 'POST',
+      url: Endpoints.EOS_TOKEN_INFO,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+
+
+    return validation.active === true;
+  }
+
+
+  public async revoke() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = undefined;
+
+
+    await this.client.http.epicgamesRequest({
+      method: 'POST',
+      url: Endpoints.EOS_TOKEN_REVOKE,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: new URLSearchParams({
+        token: this.accessToken,
+      }).toString(),
+    });
+  }
+
+
+  public async refresh() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = undefined;
+
+
+    const refreshedSession = await EOSAuthSession.create(this.client, this.clientId, this.clientSecret, {
+      grant_type: 'refresh_token',
+      refresh_token: this.refreshToken,
+    });
+
+
+    this.accessToken = refreshedSession.accessToken;
+    this.expiresAt = refreshedSession.expiresAt;
+    this.refreshToken = refreshedSession.refreshToken;
+    this.refreshTokenExpiresAt = refreshedSession.refreshTokenExpiresAt;
+    this.applicationId = refreshedSession.applicationId;
+    this.mergedAccounts = refreshedSession.mergedAccounts;
+    this.scope = refreshedSession.scope;
+
+
+    this.initRefreshTimeout();
+  }
+
+
+  public initRefreshTimeout() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = setTimeout(() => this.refresh(), this.expiresAt.getTime() - Date.now() - 15 * 60 * 1000);
+  }
+
+
+  public static async create(client: Client, clientId: string, clientSecret: string, data: Record<string, string>) {
+    const response = await client.http.epicgamesRequest({
+      method: 'POST',
+      url: Endpoints.EOS_TOKEN,
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: new URLSearchParams(data).toString(),
+    });
+
+
+    const session = new EOSAuthSession(client, response, clientSecret);
+    session.initRefreshTimeout();
+
+
+    return session;
+  }
+}
+
+
+export default EOSAuthSession; import AuthSession from './AuthSession';
+import { AuthSessionType } from '../../resources/enums';
+import Endpoints from '../../resources/Endpoints';
+import type Client from '../Client';
+import type { FortniteAuthData } from '../../resources/structs';
+
+
+/**
+ * Represents an auth session
+ */
+class FortniteAuthSession extends AuthSession<AuthSessionType.Fortnite> {
+  /**
+   * The app name
+   */
+  public app: string;
+
+
+  /**
+   * The clients service
+   */
+  public clientsService: string;
+
+
+  /**
+   * The account's display name
+   */
+  public displayName: string;
+
+
+  /**
+   * Whether the client is internal
+   */
+  public isInternalClient: boolean;
+
+
+  /**
+   * The account's in-app id
+   */
+  public inAppId: string;
+
+
+  /**
+   * The device id
+   */
+  public deviceId: string;
+
+
+  /**
+   * The refresh token
+   */
+  public refreshToken: string;
+
+
+  /**
+   * The time when the refresh token expires
+   */
+  public refreshTokenExpiresAt: Date;
+
+
+  /**
+   * The refresh timeout
+   */
+  public refreshTimeout?: NodeJS.Timeout;
+  constructor(client: Client, data: FortniteAuthData, clientSecret: string) {
+    super(client, data, clientSecret, AuthSessionType.Fortnite);
+
+
+    this.app = data.app;
+    this.clientsService = data.client_service;
+    this.displayName = data.displayName;
+    this.isInternalClient = data.internal_client;
+    this.inAppId = data.in_app_id;
+    this.deviceId = data.device_id;
+    this.refreshToken = data.refresh_token;
+    this.refreshTokenExpiresAt = new Date(data.refresh_expires_at);
+  }
+
+
+  public async verify(forceVerify = false) {
+    if (!forceVerify && this.isExpired) {
+      return false;
+    }
+
+
+    try {
+      await this.client.http.epicgamesRequest({
+        url: Endpoints.OAUTH_TOKEN_VERIFY,
+        headers: {
+          Authorization: `bearer ${this.accessToken}`,
+        },
+      });
+
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+
+  public async createExchangeCode(): Promise<string> {
+    const response = await this.client.http.epicgamesRequest({
+      url: Endpoints.OAUTH_EXCHANGE,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+
+
+    return response.code;
+  }
+
+
+  public async revoke() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = undefined;
+
+
+    await this.client.http.epicgamesRequest({
+      method: 'DELETE',
+      url: `${Endpoints.OAUTH_TOKEN_KILL}/${this.accessToken}`,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+  }
+
+
+  public async refresh() {
+    this.refreshLock.lock();
+
+
+    try {
+      clearTimeout(this.refreshTimeout);
+      this.refreshTimeout = undefined;
+
+
+      const response = await this.client.http.epicgamesRequest<FortniteAuthData>({
+        method: 'POST',
+        url: Endpoints.OAUTH_TOKEN_CREATE,
+        headers: {
+          Authorization: `basic ${Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64')}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        data: new URLSearchParams({
+          grant_type: 'refresh_token',
+          refresh_token: this.refreshToken,
+          token_type: 'eg1',
+        }).toString(),
+      });
+
+
+      this.accessToken = response.access_token;
+      this.expiresAt = new Date(response.expires_at);
+      this.refreshToken = response.refresh_token;
+      this.refreshTokenExpiresAt = new Date(response.refresh_expires_at);
+
+
+      this.initRefreshTimeout();
+    } finally {
+      this.refreshLock.unlock();
+    }
+  }
+
+
+  public initRefreshTimeout() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = setTimeout(() => this.refresh(), this.expiresAt.getTime() - Date.now() - 15 * 60 * 1000);
+  }
+
+
+  public static async create(client: Client, clientId: string, clientSecret: string, data: any) {
+    const response = await client.http.epicgamesRequest<FortniteAuthData>({
+      method: 'POST',
+      url: Endpoints.OAUTH_TOKEN_CREATE,
+      headers: {
+        Authorization: `basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: new URLSearchParams(data).toString(),
+    });
+
+
+    const session = new FortniteAuthSession(client, response, clientSecret);
+    session.initRefreshTimeout();
+
+
+    return session;
+  }
+}
+
+
+export default FortniteAuthSession; import AuthSession from './AuthSession';
+import { AuthSessionType } from '../../resources/enums';
+import Endpoints from '../../resources/Endpoints';
+import type Client from '../Client';
+import type { FortniteClientCredentialsAuthData } from '../../resources/structs';
+
+
+class FortniteClientCredentialsAuthSession extends AuthSession<AuthSessionType.FortniteClientCredentials> {
+  public clientsService: string;
+  public isInternalClient: boolean;
+  public productId: string;
+  public applicationId: string;
+  public refreshTimeout?: NodeJS.Timeout;
+  constructor(client: Client, data: FortniteClientCredentialsAuthData, clientSecret: string) {
+    super(client, data, clientSecret, AuthSessionType.FortniteClientCredentials);
+
+
+    this.clientsService = data.client_service;
+    this.isInternalClient = data.internal_client;
+    this.productId = data.product_id;
+    this.applicationId = data.application_id;
+  }
+
+
+  public async verify(forceVerify = false) {
+    if (!forceVerify && this.isExpired) {
+      return false;
+    }
+
+
+    try {
+      await this.client.http.epicgamesRequest({
+        url: Endpoints.OAUTH_TOKEN_VERIFY,
+        headers: {
+          Authorization: `bearer ${this.accessToken}`,
+        },
+      });
+
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+
+  public async revoke() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = undefined;
+
+
+    await this.client.http.epicgamesRequest({
+      method: 'DELETE',
+      url: `${Endpoints.OAUTH_TOKEN_KILL}/${this.accessToken}`,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+  }
+
+
+  public async refresh() {
+    this.refreshLock.lock();
+
+
+    try {
+      clearTimeout(this.refreshTimeout);
+      this.refreshTimeout = undefined;
+
+
+      const response = await this.client.http.epicgamesRequest<FortniteClientCredentialsAuthData>({
+        method: 'POST',
+        url: Endpoints.OAUTH_TOKEN_CREATE,
+        headers: {
+          Authorization: `basic ${Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64')}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        data: new URLSearchParams({
+          grant_type: 'client_credentials',
+          token_type: 'eg1',
+        }).toString(),
+      });
+
+
+      this.accessToken = response.access_token;
+      this.expiresAt = new Date(response.expires_at);
+
+
+      this.initRefreshTimeout();
+    } finally {
+      this.refreshLock.unlock();
+    }
+  }
+
+
+  public initRefreshTimeout() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = setTimeout(() => this.refresh(), this.expiresAt.getTime() - Date.now() - 15 * 60 * 1000);
+  }
+
+
+  public static async create(client: Client, clientId: string, clientSecret: string, data: any) {
+    const response = await client.http.epicgamesRequest<FortniteClientCredentialsAuthData>({
+      method: 'POST',
+      url: Endpoints.OAUTH_TOKEN_CREATE,
+      headers: {
+        Authorization: `basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: new URLSearchParams(data).toString(),
+    });
+
+
+    const session = new FortniteClientCredentialsAuthSession(client, response, clientSecret);
+    session.initRefreshTimeout();
+
+
+    return session;
+  }
+}
+
+
+export default FortniteClientCredentialsAuthSession; import AuthSession from './AuthSession';
+import { AuthSessionType } from '../../resources/enums';
+import Endpoints from '../../resources/Endpoints';
+import type Client from '../Client';
+import type { LauncherAuthData } from '../../resources/structs';
+
+
+class LauncherAuthSession extends AuthSession<AuthSessionType.Launcher> {
+  public app: string;
+  public clientsService: string;
+  public displayName: string;
+  public isInternalClient: boolean;
+  public inAppId: string;
+  public scope: string[];
+  public refreshToken: string;
+  public refreshTokenExpiresAt: Date;
+  public refreshTimeout?: NodeJS.Timeout;
+  constructor(client: Client, data: LauncherAuthData, clientSecret: string) {
+    super(client, data, clientSecret, AuthSessionType.Launcher);
+
+
+    this.app = data.app;
+    this.clientsService = data.client_service;
+    this.displayName = data.displayName;
+    this.isInternalClient = data.internal_client;
+    this.inAppId = data.in_app_id;
+    this.scope = data.scope;
+    this.refreshToken = data.refresh_token;
+    this.refreshTokenExpiresAt = new Date(data.refresh_expires_at);
+  }
+
+
+  public async verify(forceVerify = false) {
+    if (!forceVerify && this.isExpired) {
+      return false;
+    }
+
+
+    try {
+      await this.client.http.epicgamesRequest({
+        url: Endpoints.OAUTH_TOKEN_VERIFY,
+        headers: {
+          Authorization: `bearer ${this.accessToken}`,
+        },
+      });
+
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+
+  public async createExchangeCode(): Promise<string> {
+    const response = await this.client.http.epicgamesRequest({
+      url: Endpoints.OAUTH_EXCHANGE,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+
+
+    return response.code;
+  }
+
+
+  public async revoke() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = undefined;
+
+
+    await this.client.http.epicgamesRequest({
+      method: 'DELETE',
+      url: `${Endpoints.OAUTH_TOKEN_KILL}/${this.accessToken}`,
+      headers: {
+        Authorization: `bearer ${this.accessToken}`,
+      },
+    });
+  }
+
+
+  public async refresh() {
+    this.refreshLock.lock();
+
+
+    try {
+      clearTimeout(this.refreshTimeout);
+      this.refreshTimeout = undefined;
+
+
+      const response = await this.client.http.epicgamesRequest<LauncherAuthData>({
+        method: 'POST',
+        url: Endpoints.OAUTH_TOKEN_CREATE,
+        headers: {
+          Authorization: `basic ${Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64')}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        data: new URLSearchParams({
+          grant_type: 'refresh_token',
+          refresh_token: this.refreshToken,
+          token_type: 'eg1',
+        }).toString(),
+      });
+
+
+      this.accessToken = response.access_token;
+      this.expiresAt = new Date(response.expires_at);
+      this.refreshToken = response.refresh_token;
+      this.refreshTokenExpiresAt = new Date(response.refresh_expires_at);
+
+
+      this.client.emit('refreshtoken:created', {
+        accountId: this.accountId,
+        clientId: this.clientId,
+        displayName: this.displayName,
+        expiresAt: this.refreshTokenExpiresAt.toISOString(),
+        expiresIn: this.refreshTokenExpiresAt.getTime() - Date.now(),
+        token: this.refreshToken,
+      });
+
+
+      this.initRefreshTimeout();
+    } finally {
+      this.refreshLock.unlock();
+    }
+  }
+
+
+  public initRefreshTimeout() {
+    clearTimeout(this.refreshTimeout);
+    this.refreshTimeout = setTimeout(() => this.refresh(), this.expiresAt.getTime() - Date.now() - 15 * 60 * 1000);
+  }
+
+
+  public static async create(client: Client, clientId: string, clientSecret: string, data: any) {
+    const response = await client.http.epicgamesRequest<LauncherAuthData>({
+      method: 'POST',
+      url: Endpoints.OAUTH_TOKEN_CREATE,
+      headers: {
+        Authorization: `basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: new URLSearchParams(data).toString(),
+    });
+
+
+    const session = new LauncherAuthSession(client, response, clientSecret);
+    session.initRefreshTimeout();
+
+
+    client.emit('refreshtoken:created', {
+      accountId: session.accountId,
+      clientId: session.clientId,
+      displayName: session.displayName,
+      expiresAt: session.refreshTokenExpiresAt.toISOString(),
+      expiresIn: Math.round((session.refreshTokenExpiresAt.getTime() - Date.now()) / 1000),
+      token: session.refreshToken,
+    });
+
+
+    return session;
+  }
+}
+
+
+export default LauncherAuthSession; make all this work dont use cleint creditials auth tho
